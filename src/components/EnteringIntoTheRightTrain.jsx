@@ -78,7 +78,7 @@ const EnteringIntoTheRightTrain = () => {
       {/* cards  */}
       <div className="grid place-items-center mt-10 gap-10 lg:grid-flow-col lg:place-items-start lg:gap-5 xl:mt-32 ">
         {cardDetails.map((card, index) => (
-          <div className="w-full max-w-[350px] min-h-[450px] md:max-w-[400px] overflow-hidden rounded-xl border-[1px] border-[#ffffff5d]">
+          <div key={`Entering_into_card_${index}`} className="w-full max-w-[350px] min-h-[450px] md:max-w-[400px] overflow-hidden rounded-xl border-[1px] border-[#ffffff5d]">
             {/* card image  */}
             <div className="relative w-full aspect-[3/2] overflow-hidden">
               <Image

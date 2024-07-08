@@ -1,8 +1,8 @@
 import DoorOpensToThoseWhoKnock from "@/components/DoorOpensToThoseWhoKnock";
 import EnteringIntoTheRightTrain from "@/components/EnteringIntoTheRightTrain";
-import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import TakingTheWrongTrain from "@/components/TakingTheWrongTrain";
+import TheWavingGreenFlag from "@/components/TheWavingGreenFlag";
 
 export default function Home() {
   return (
@@ -11,6 +11,7 @@ export default function Home() {
       <TakingTheWrongTrain />
       <DoorOpensToThoseWhoKnock />
       <EnteringIntoTheRightTrain />
+      <TheWavingGreenFlag/>
     </main>
   );
 }

@@ -52,7 +52,7 @@ const DoorOpensToThoseWhoKnock = () => {
         {cardDetails.map((card, index) => {
           const isEven = index % 2 === 0;
           return (
-            <div className="bg-primary rounded-full overflow-hidden grid gap-5 max-w-[345px] lg:max-w-full lg:grid-flow-col lg:place-items-center xl:max-w-[80%] xl:gap-10">
+            <div key={`Door_opens_card_${index}`} className="bg-primary rounded-full overflow-hidden grid gap-5 max-w-[345px] lg:max-w-full lg:grid-flow-col lg:place-items-center xl:max-w-[80%] xl:gap-10">
               {/* card image  */}
               <div className="relative w-full lg:w-[330px] aspect-square rounded-full overflow-hidden">
                 <Image
