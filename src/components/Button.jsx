@@ -11,7 +11,7 @@ const Button = ({ bg, color , hoverColor , bgInvert, children, borderColor }) =>
           : `bg-transparent ${
               borderColor ? borderColor : "border-[#939091]"
             } hover:bg-buttonHover hover:border-transparent`
-      } active:scale-95 border-2 transition-all ${
+      } active:scale-95 border-[1px] transition-all ${
         color ? color : "text-textColor"
       } ${ hoverColor ? hoverColor : 'hover:text-textColor' } px-[24px] py-[10px] rounded-full w-fit`}
     >
