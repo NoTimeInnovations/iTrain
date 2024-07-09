@@ -45,7 +45,14 @@ const TransformYourJourny = () => {
         "/images/Transform Your Journey to Become a Diamond!/2nd image.jpg",
       title: "Arriving at the Right Destination",
       description:
-        "With hands-on experience we make you prepared for your interview.         An Open-arm welcome to our team for those who are passionate about teaching. Just start smiling for your better future ahead.",
+        "With hands-on experience we make you prepared for your interview. An Open-arm welcome to our team for those who are passionate about teaching. Just start smiling for your better future ahead.",
+    },
+    {
+      image:
+        "/images/Transform Your Journey to Become a Diamond!/3rd image.jpg",
+      title: "Getting the Ticket",
+      description:
+        "Master in-demand skills and earn industry-recognized certifications to enhance your career journey.",
     },
   ];
 
@@ -54,7 +61,7 @@ const TransformYourJourny = () => {
   return (
     <Section
       className={
-        "bg-primary text-textColor px-5 md:px-20 py-[100px] xl:pt-[120px] xl:px-[200px] xl:grid xl:place-items-center"
+        "bg-primary text-textColor px-5 md:px-20 py-[100px] xl:pt-[120px] xl:px-[200px] "
       }
     >
       {/* title  */}
@@ -63,53 +70,55 @@ const TransformYourJourny = () => {
       </p>
 
       {/* swiper  */}
-      <div className="relative mt-32 xl:w-[80%]">
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={20}
-          loop={true}
-          onSwiper={(swiper) => (swiperRef.current = swiper)}
-          navigation={true}
-          breakpoints={{
-            768: {
-              slidesPerView: 2,
-            },
-          }}
-          modules={[Navigation]}
-          className="mySwiper w-full relative "
-        >
-          {cardDetails.map((card, index) => (
-            <SwiperSlide key={`swiper_card_${index}`} className="w-full">
-              <div className="w-full grid place-items-center">
-                <Card
-                  image={card.image}
-                  title={card.title}
-                  description={card.description}
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-
-      {/* swiper buttons  */}
-      <div className="w-full flex justify-center gap-10 md:justify-between xl:max-w-[80%] mt-10">
-        {/* prev button  */}
-        <div
-          className="swipe-btn-prev"
-          onClick={() => swiperRef.current.slidePrev()}
-        >
-          <Button bg={"bg-secondary"} bgInvert={true}>
-            Previous
-          </Button>
+      <div className="lg:flex lg:flex-col lg:items-center">
+        <div className="relative mt-32 xl:w-[80%]">
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={20}
+            loop={true}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
+            navigation={true}
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+              },
+            }}
+            modules={[Navigation]}
+            className="mySwiper w-full relative "
+          >
+            {cardDetails.map((card, index) => (
+              <SwiperSlide key={`swiper_card_${index}`} className="w-full">
+                <div className="flex justify-center">
+                  <Card
+                    image={card.image}
+                    title={card.title}
+                    description={card.description}
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
 
-        {/* next button  */}
-        <div
-          className="swipe-btn-next"
-          onClick={() => swiperRef.current.slideNext()}
-        >
-          <Button bg={"bg-buttonHover"}>Next</Button>
+        {/* swiper buttons  */}
+        <div className="w-full flex justify-center gap-10 md:justify-between xl:max-w-[80%] mt-10">
+          {/* prev button  */}
+          <div
+            className="swipe-btn-prev"
+            onClick={() => swiperRef.current.slidePrev()}
+          >
+            <Button bg={"bg-secondary"} bgInvert={true}>
+              Previous
+            </Button>
+          </div>
+
+          {/* next button  */}
+          <div
+            className="swipe-btn-next"
+            onClick={() => swiperRef.current.slideNext()}
+          >
+            <Button bg={"bg-buttonHover"}>Next</Button>
+          </div>
         </div>
       </div>
     </Section>
