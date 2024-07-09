@@ -3,6 +3,7 @@ import EnteringIntoTheRightTrain from "@/components/EnteringIntoTheRightTrain";
 import HeroSection from "@/components/HeroSection";
 import TakingTheWrongTrain from "@/components/TakingTheWrongTrain";
 import TheWavingGreenFlag from "@/components/TheWavingGreenFlag";
+import TransformYourJourny from "@/components/TransformYourJourny";
 
 export default function Home() {
   return (
@@ -11,7 +12,8 @@ export default function Home() {
       <TakingTheWrongTrain />
       <DoorOpensToThoseWhoKnock />
       <EnteringIntoTheRightTrain />
-      <TheWavingGreenFlag/>
+      <TheWavingGreenFlag />
+      <TransformYourJourny />
     </main>
   );
 }

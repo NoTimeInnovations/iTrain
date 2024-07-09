@@ -5,13 +5,13 @@ const Button = ({ bg, color , hoverColor , bgInvert, children, borderColor }) =>
     <button
       className={`${
         !bgInvert
-          ? `${bg ? bg : "bg-secondary"} hover:bg-transparent hover:${
-              borderColor ? borderColor : "border-[#939091]"
-            }`
+          ? `${bg ? bg : "bg-transparent "} border-transparent hover:bg-transparent ${
+              borderColor ? borderColor : "hover:border-[#939091]"
+            } border-[1px]`
           : `bg-transparent ${
               borderColor ? borderColor : "border-[#939091]"
-            } hover:bg-buttonHover hover:border-transparent`
-      } active:scale-95 border-[1px] transition-all ${
+            } hover:bg-buttonHover hover:border-transparent border-[1px]`
+      } active:scale-95  transition-all ${
         color ? color : "text-textColor"
       } ${ hoverColor ? hoverColor : 'hover:text-textColor' } px-[24px] py-[10px] rounded-full w-fit`}
     >
