@@ -1,8 +1,9 @@
 import React from "react";
 
-const Button = ({ bg, color , hoverColor , bgInvert, children, borderColor , padding , textSize }) => {
+const Button = ({ bg, color , hoverColor , bgInvert, children, borderColor , padding , textSize, type }) => {
   return (
     <button
+      type={type}
       className={`${
         !bgInvert
           ? `${bg ? bg : "bg-transparent "} border-transparent hover:bg-transparent ${

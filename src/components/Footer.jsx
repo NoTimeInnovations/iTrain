@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
+import toast from "react-hot-toast";
 
 const Footer = ({ id }) => {
   const webPageLinks = [
     {
       title: "Home",
-      link: "#home",
+      link: "#hero",
     },
     {
       title: "About",
@@ -26,12 +27,12 @@ const Footer = ({ id }) => {
   const getInTouchLinks = [
     {
       title: "+91 9073681744",
-      link: "#",
+      link: "tel:+919073681744",
       icon: "/images/icons/phone.svg",
     },
     {
       title: "itrainremotely@gmail.com",
-      link: "#",
+      link: "mailto:itrainremotely@gmail.com",
       icon: "/images/icons/email.svg",
     },
   ];
@@ -46,32 +47,65 @@ const Footer = ({ id }) => {
     {
       image: "/images/icons/facebook.svg",
       title: "facebook",
-      link: "#",
+      link: "https://www.facebook.com/profile.php?id=61560484353385",
     },
     {
       image: "/images/icons/instagram.svg",
       title: "instagram",
-      link: "#",
+      link: "https://www.instagram.com/itraintechnologiesremotely/  ",
     },
     {
       image: "/images/icons/youtube.svg",
       title: "youtube",
-      link: "#",
+      link: "https://www.youtube.com/@iTraintechnologiesremotely",
     },
     {
       image: "/images/icons/behance.svg",
       title: "behance",
-      link: "#",
+      link: "https://www.behance.net/itraintechnol",
     },
     {
       image: "/images/icons/linkedin.svg",
       title: "linkedin",
-      link: "#",
+      link: "https://www.linkedin.com/company/itrain-technologies4malayalees/",
     },
   ];
 
+  const [formEmail, setFormEmail] = useState();
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    toast.loading("Subscribing.....");
+    fetch("http://localhost:3000/api/send-mail", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        email: formEmail,
+      }),
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        console.log(json);
+        toast.dismiss();
+        if (json.success) {
+          toast.success("Subscribed to News Letter!");
+        } else {
+          toast.error("Subscribing failed!");
+        }
+      })
+      .catch((e) => {
+        toast.dismiss();
+        toast.error("Subscribing failed!");
+      });
+  };
+
   return (
-    <footer id={id} className="bg-primary text-textColor p-10 lg:p-20 xl:px-80 xl:py-32 grid gap-10 relative">
+    <footer
+      id={id}
+      className="bg-primary text-textColor p-10 lg:p-20 xl:px-80 xl:py-32 grid gap-10 relative"
+    >
       <div className="grid gap-10 lg:grid-flow-col">
         {/* webPageLinks  */}
         <div className="grid place-items-center gap-3 lg:gap-5 text-center lg:text-start lg:place-items-start h-fit">
@@ -143,7 +177,7 @@ const Footer = ({ id }) => {
           {/* links  */}
           <div className="flex items-center gap-5">
             {followUsLinks.map((item, index) => (
-              <Link href={item.link}>
+              <Link key={`follow_link_${index}`} href={item.link}>
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -163,14 +197,20 @@ const Footer = ({ id }) => {
           Subscribe to our NewsLetter
         </label>
 
-        <div className="grid grid-cols-[1fr,min-content] bg-[#938F96] rounded place-items-center px-3 md:py-2">
+        <form
+          onSubmit={handleFormSubmit}
+          className="grid grid-cols-[1fr,min-content] bg-[#938F96] rounded place-items-center px-3 md:py-2"
+        >
           <input
             type="email"
             id="email"
             placeholder="Enter your email"
             className="w-full placeholder-textColor p-3 bg-transparent focus:outline-none"
+            required
+            onChange={(e) => setFormEmail(e.target.value)}
           />
           <Button
+            type={"submit"}
             bg={"bg-textColor"}
             color={"text-buttonHover"}
             padding={"py-2 px-1 lg:px-3"}
@@ -178,7 +218,7 @@ const Footer = ({ id }) => {
           >
             Subscribe
           </Button>
-        </div>
+        </form>
       </div>
 
       {/* whastapp  */}

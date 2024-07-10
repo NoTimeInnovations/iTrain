@@ -6,10 +6,12 @@ import TakingTheWrongTrain from "@/components/TakingTheWrongTrain";
 import TheThreeStepProcess from "@/components/TheThreeStepProcess";
 import TheWavingGreenFlag from "@/components/TheWavingGreenFlag";
 import TransformYourJourny from "@/components/TransformYourJourny";
+import { Toaster } from "react-hot-toast";
 
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden">
+      <Toaster/>
       <HeroSection id={'hero'} />
       <TakingTheWrongTrain id={'wrong-train'} />
       <DoorOpensToThoseWhoKnock id={'door-opens'} />
