@@ -10,8 +10,8 @@ export default async function handler(req, res) {
         port: 587, // Replace with your SMTP server port
         secure: false, // true for 465, false for other ports
         auth: {
-            user: process.env.NOTEMAILER_SEND_FROM, // Replace with your email
-            pass: process.env.NOTEMAILER_APP_PASS // Replace with your app password ( dont use email pass )
+            user: process.env.NODEMAILER_SEND_FROM, // Replace with your email
+            pass: process.env.NODEMAILER_APP_PASS // Replace with your app password ( dont use email pass )
         }
     });
 
