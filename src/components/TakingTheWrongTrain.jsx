@@ -33,12 +33,12 @@ const TakingTheWrongTrain = ({ id }) => {
       <div className="text-textColor text-center grid gap-5 ">
         {/* title  */}
         <p className="text-lg font-medium md:text-4xl xl:text-[32px] xl:leading-[40px]">
-          Taking the Wrong Train to the Right Destination?
+          Taking the Wrong Train to the <br className="md:hidden" /> Right Destination?
         </p>
 
         {/* subtitle  */}
         <p className="md:text-xl xl:text-[22px] xl:leading-[28px]">
-          Let’s Analyse Where the Wrong Career is Taking You
+          Let’s Analyse Where the Wrong <br className="md:hidden" /> Career is Taking You
         </p>
       </div>
 

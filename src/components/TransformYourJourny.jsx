@@ -67,7 +67,7 @@ const TransformYourJourny = ({ id }) => {
     >
       {/* title  */}
       <p className="text-lg font-medium md:text-4xl xl:text-[32px] xl:leading-[40px] text-center">
-        Transform Your Journey to Become a Diamond!
+        Transform Your Journey to <br className="md:hidden" /> Become a Diamond!
       </p>
 
       {/* swiper  */}
