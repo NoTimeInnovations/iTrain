@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = ({ bg, color , hoverColor , bgInvert, children, borderColor }) => {
+const Button = ({ bg, color , hoverColor , bgInvert, children, borderColor , padding , textSize }) => {
   return (
     <button
       className={`${
@@ -13,7 +13,7 @@ const Button = ({ bg, color , hoverColor , bgInvert, children, borderColor }) =>
             } hover:bg-buttonHover hover:border-transparent border-[1px]`
       } active:scale-95  transition-all ${
         color ? color : "text-textColor"
-      } ${ hoverColor ? hoverColor : 'hover:text-textColor' } px-[24px] py-[10px] rounded-full w-fit`}
+      } ${ hoverColor ? hoverColor : 'hover:text-textColor' } ${padding ? padding : 'px-[24px] py-[10px]'} ${textSize} rounded-full w-fit`}
     >
       {children}
     </button>
