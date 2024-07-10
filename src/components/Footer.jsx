@@ -87,7 +87,6 @@ const Footer = ({ id }) => {
     })
       .then((res) => res.json())
       .then((json) => {
-        console.log(json);
         toast.dismiss();
         if (json.success) {
           toast.success("Subscribed to News Letter!");
