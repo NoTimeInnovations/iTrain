@@ -2,6 +2,7 @@ import React from "react";
 import Section from "./Section";
 import Image from "next/image";
 import Button from "./Button";
+import Link from "next/link";
 
 const EnteringIntoTheRightTrain = ({ id }) => {
   const cardDetails = [
@@ -18,7 +19,7 @@ const EnteringIntoTheRightTrain = ({ id }) => {
       },
       button: {
         text: "Book a Demo",
-        link: "/book-a-demo",
+        link: "https://wa.me/919037681744",
       },
     },
     {
@@ -34,7 +35,7 @@ const EnteringIntoTheRightTrain = ({ id }) => {
       },
       button: {
         text: "Book a Demo",
-        link: "/book-a-demo",
+        link: "https://wa.me/919037681744",
       },
     },
     {
@@ -50,7 +51,7 @@ const EnteringIntoTheRightTrain = ({ id }) => {
       },
       button: {
         text: "Join Us",
-        link: "/join-us",
+        link: "https://wa.me/919037681744",
       },
     },
   ];
@@ -115,9 +116,11 @@ const EnteringIntoTheRightTrain = ({ id }) => {
 
               {/* button  */}
               <div className="flex justify-center py-5">
-                <Button color={"text-textHoverColor "} bgInvert={true}>
-                  {card.button.text}
-                </Button>
+                <Link href={card.button.link}>
+                  <Button color={"text-textHoverColor "} bgInvert={true}>
+                    {card.button.text}
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

@@ -16,11 +16,11 @@ const Footer = ({ id }) => {
     },
     {
       title: "Courses",
-      link: "#courses",
+      link: "#right-train",
     },
     {
       title: "Contact",
-      link: "#contact",
+      link: "#footer",
     },
   ];
 
@@ -223,7 +223,7 @@ const Footer = ({ id }) => {
 
       {/* whastapp  */}
       <div className="flex justify-end">
-        <Link href={"#"}>
+        <Link href={"https://wa.me/919037681744"}>
           <Image
             src={"/images/icons/whatsapp.svg"}
             alt="whatsapp"

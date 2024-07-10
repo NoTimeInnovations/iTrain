@@ -39,8 +39,8 @@ const Header = () => {
         <nav className="grid gap-[40px] lg:grid-flow-col lg:place-items-center">
           <NavLinks href="#home">Home</NavLinks>
           <NavLinks href="/about">About</NavLinks>
-          <NavLinks href="/courses">Courses</NavLinks>
-          <NavLinks href="/contact">
+          <NavLinks href="#right-train">Courses</NavLinks>
+          <NavLinks href="#footer">
             <Button bg={"bg-secondary"} bgInvert={true}>
               Contact
             </Button>
