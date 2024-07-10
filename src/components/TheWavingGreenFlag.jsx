@@ -2,42 +2,10 @@ import React from "react";
 import Section from "./Section";
 import Image from "next/image";
 
-const ChartBox = ({
-  title,
-  description,
-  rotate,
-  boxTop,
-  boxLeft,
-  boxTranslate,
-}) => {
-  return (
-    <div
-      className={`absolute text-[10px] max-w-[150px] ${boxTop || "top-0"} ${
-        boxLeft || "left-1/2"
-      } ${boxTranslate || "-translate-x-1/2"} grid gap-2`}
-    >
-      {/* title  */}
-      <p className="text-center">{title}</p>
-
-      {/* description  */}
-      <p>{description}</p>
-
-      {/* arrow image  */}
-      <div className="w-[170px] aspect-square absolute -top-[30%] -left-[12%]">
-        <Image
-          src={"/images/Green Flag/arrow.svg"}
-          alt="arrow"
-          fill
-          className={`object-cover w-full h-full ${rotate}`}
-        />
-      </div>
-    </div>
-  );
-};
-
-const TheWavingGreenFlag = () => {
+const TheWavingGreenFlag = ({ id }) => {
   return (
     <Section
+      id={id}
       style={{ backgroundImage: `url('/images/Green Flag/bg-image.png')` }}
       className={`bg-cover bg-center relative `}
     >
@@ -57,26 +25,12 @@ const TheWavingGreenFlag = () => {
         </div>
 
         {/* chart container  */}
-        <div className="relative aspect-square w-full mt-24 lg:max-w-[800px] text-textColor">
-          {/* top box  */}
-          <ChartBox
-            title={"What"}
-            description={
-              "Tailoring a Customized Course with Industry Relevancy, and Making a Solution in the Form of Learning"
-            }
-            rotate={""}
-          />
-
-          {/* leftBox  */}
-          <ChartBox
-            title={"Why"}
-            description={
-              "Learning is always personal as we Prioritize Individual Learning to the Knowledge fulfillment"
-            }
-            boxTop={'top-1/2'}
-            boxLeft={''}
-            boxTranslate={'-translate-y-[10%]'}
-            rotate={'rotate-[117deg]'}
+        <div className="relative w-full aspect-square mt-20 max-w-[600px] xl:max-w-[800px]">
+          <Image
+            src={'/images/Green Flag/center-image.svg'}
+            alt="green flag"
+            fill
+            className="object-cover w-full h-full"
           />
         </div>
       </div>

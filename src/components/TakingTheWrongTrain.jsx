@@ -2,7 +2,7 @@ import React from "react";
 import Section from "./Section";
 import Image from "next/image";
 
-const TakingTheWrongTrain = () => {
+const TakingTheWrongTrain = ({ id }) => {
   const cardDetails = [
     {
       image:
@@ -28,7 +28,7 @@ const TakingTheWrongTrain = () => {
   ];
 
   return (
-    <Section className={"bg-primary px-5 md:px-20 py-[100px] xl:pt-[120px] xl:px-[200px] grid place-items-center "}>
+    <Section id={id} className={"bg-primary px-5 md:px-20 py-[100px] xl:pt-[120px] xl:px-[200px] grid place-items-center "}>
       {/* title and subtitle  */}
       <div className="text-textColor text-center grid gap-5 ">
         {/* title  */}

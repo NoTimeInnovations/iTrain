@@ -21,7 +21,7 @@ const Card = ({ image, title }) => {
   );
 };
 
-const TheThreeStepProcess = () => {
+const TheThreeStepProcess = ({ id }) => {
   const cardDetails = [
     {
       image: "/images/The Three Step Process/1st image.jpg",
@@ -39,6 +39,7 @@ const TheThreeStepProcess = () => {
 
   return (
     <Section
+      id={id}
       className={
         "bg-secondary text-textColor px-5 md:px-20 py-[100px] xl:pt-[120px] xl:px-[200px] grid grid-rows-[min-content,1fr] place-items-center"
       }

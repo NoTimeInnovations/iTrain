@@ -3,9 +3,10 @@ import Header from "./Header";
 import Section from "./Section";
 import Button from "./Button";
 
-const HeroSection = () => {
+const HeroSection = ({ id }) => {
   return (
     <Section
+      id={id}
       className={`grid grid-rows-[min-content,1fr] bg-[url('/images/HeroSection/image.png')] bg-cover bg-center`}
     >
       <Header />

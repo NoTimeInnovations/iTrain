@@ -37,7 +37,7 @@ const Header = () => {
       {/* nav */}
       <div className={`fixed top-0 right-0 z-50 bg-secondary w-[90%] h-screen p-10 pt-20 transition-all duration-500 ${isOpen ? 'translate-x-0' : 'translate-x-full'} lg:static lg:w-auto lg:h-auto lg:bg-transparent lg:right-auto lg:top-auto lg:translate-x-0  lg:p-0`}>
         <nav className="grid gap-[40px] lg:grid-flow-col lg:place-items-center">
-          <NavLinks href="/">Home</NavLinks>
+          <NavLinks href="#home">Home</NavLinks>
           <NavLinks href="/about">About</NavLinks>
           <NavLinks href="/courses">Courses</NavLinks>
           <NavLinks href="/contact">

@@ -2,7 +2,7 @@ import React from "react";
 import Section from "./Section";
 import Image from "next/image";
 
-const DoorOpensToThoseWhoKnock = () => {
+const DoorOpensToThoseWhoKnock = ({ id }) => {
   const cardDetails = [
     {
       image: "/images/The Door Opens to Those Who Knock!/1st image.jpg",
@@ -38,6 +38,7 @@ const DoorOpensToThoseWhoKnock = () => {
 
   return (
     <Section
+      id={id}
       className={
         "bg-[#101417] px-5 md:px-20 py-[100px] xl:pt-[120px] xl:px-[200px] text-textColor"
       }

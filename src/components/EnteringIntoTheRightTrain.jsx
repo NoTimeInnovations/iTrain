@@ -3,7 +3,7 @@ import Section from "./Section";
 import Image from "next/image";
 import Button from "./Button";
 
-const EnteringIntoTheRightTrain = () => {
+const EnteringIntoTheRightTrain = ({ id }) => {
   const cardDetails = [
     {
       image: "/images/Getting to the right train, the iTrain/1st image.png",
@@ -57,6 +57,7 @@ const EnteringIntoTheRightTrain = () => {
 
   return (
     <Section
+      id={id}
       className={
         "bg-primary text-textColor px-5 md:px-20 py-[100px] xl:pt-[120px] xl:px-[200px] grid place-items-center"
       }
@@ -78,7 +79,10 @@ const EnteringIntoTheRightTrain = () => {
       {/* cards  */}
       <div className="grid place-items-center mt-10 gap-10 lg:grid-flow-col lg:place-items-start lg:gap-5 xl:mt-32 ">
         {cardDetails.map((card, index) => (
-          <div key={`Entering_into_card_${index}`} className="w-full max-w-[350px] min-h-[450px] md:max-w-[400px] overflow-hidden rounded-xl border-[1px] border-[#ffffff5d]">
+          <div
+            key={`Entering_into_card_${index}`}
+            className="w-full max-w-[350px] min-h-[450px] md:max-w-[400px] overflow-hidden rounded-xl border-[1px] border-[#ffffff5d]"
+          >
             {/* card image  */}
             <div className="relative w-full aspect-[3/2] overflow-hidden">
               <Image
@@ -111,13 +115,14 @@ const EnteringIntoTheRightTrain = () => {
 
               {/* button  */}
               <div className="flex justify-center py-5">
-                <Button color={'text-textHoverColor '} bgInvert={true}  >{card.button.text}</Button>
+                <Button color={"text-textHoverColor "} bgInvert={true}>
+                  {card.button.text}
+                </Button>
               </div>
             </div>
           </div>
         ))}
       </div>
-
     </Section>
   );
 };

@@ -10,14 +10,14 @@ import TransformYourJourny from "@/components/TransformYourJourny";
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden">
-      <HeroSection />
-      <TakingTheWrongTrain />
-      <DoorOpensToThoseWhoKnock />
-      <EnteringIntoTheRightTrain />
-      <TheWavingGreenFlag />
-      <TransformYourJourny />
-      <TheThreeStepProcess />
-      <Footer />
+      <HeroSection id={'hero'} />
+      <TakingTheWrongTrain id={'wrong-train'} />
+      <DoorOpensToThoseWhoKnock id={'door-opens'} />
+      <EnteringIntoTheRightTrain id={'right-train'} />
+      <TheWavingGreenFlag id={'green-flag'} />
+      <TransformYourJourny id={'transform-journy'} />
+      <TheThreeStepProcess id={'three-step'} />
+      <Footer id={'footer'} />
     </main>
   );
 }

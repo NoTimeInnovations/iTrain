@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import Button from "./Button";
 
-const Footer = () => {
+const Footer = ({ id }) => {
   const webPageLinks = [
     {
       title: "Home",
@@ -71,7 +71,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-primary text-textColor p-10 lg:p-20 xl:px-80 xl:py-32 grid gap-10 relative">
+    <footer id={id} className="bg-primary text-textColor p-10 lg:p-20 xl:px-80 xl:py-32 grid gap-10 relative">
       <div className="grid gap-10 lg:grid-flow-col">
         {/* webPageLinks  */}
         <div className="grid place-items-center gap-3 lg:gap-5 text-center lg:text-start lg:place-items-start h-fit">

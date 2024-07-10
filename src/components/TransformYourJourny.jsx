@@ -31,7 +31,7 @@ const Card = ({ image, title, description }) => {
   );
 };
 
-const TransformYourJourny = () => {
+const TransformYourJourny = ({ id }) => {
   const cardDetails = [
     {
       image:
@@ -60,6 +60,7 @@ const TransformYourJourny = () => {
 
   return (
     <Section
+      id={id}
       className={
         "bg-primary text-textColor px-5 md:px-20 py-[100px] xl:pt-[120px] xl:px-[200px] "
       }
