@@ -41,7 +41,7 @@ const TheThreeStepProcess = ({ id }) => {
     <Section
       id={id}
       className={
-        "bg-secondary text-textColor px-5 md:px-20 py-[100px] xl:pt-[120px] xl:px-[200px] grid grid-rows-[min-content,1fr] place-items-center"
+        "bg-secondary text-textColor px-5 py-[100px] xl:pt-[120px] grid grid-rows-[min-content,1fr] place-items-center"
       }
     >
       {/* title  */}
@@ -50,7 +50,7 @@ const TheThreeStepProcess = ({ id }) => {
       </p>
 
       {/* cards container  */}
-      <div className="grid gap-10 md:gap-20 mt-10 lg:grid-flow-col lg:gap-10 xl:gap-40">
+      <div className="grid gap-10 md:gap-20 mt-10 lg:grid-flow-col lg:gap-10 xl:gap-24">
         {cardDetails.map((card, index) => (
           <Card
             key={`the_three_step_process_card_${index}`}

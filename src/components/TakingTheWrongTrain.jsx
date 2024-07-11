@@ -45,7 +45,7 @@ const TakingTheWrongTrain = ({ id }) => {
       {/* cards  */}
       <div className="grid place-items-center mt-10 gap-10 lg:grid-flow-col lg:place-items-start lg:gap-5 lg:mt-20 xl:mt-32 ">
         {cardDetails.map((card, index) => (
-          <div key={`Taking_the_wrong_way_card_${index}`} className="w-full max-w-[350px] min-h-[450px] md:max-w-[400px] overflow-hidden rounded-xl border-[1px] border-[#ffffff5d]">
+          <div key={`Taking_the_wrong_way_card_${index}`} className="w-full max-w-[350px] h-[450px] md:max-w-[400px] grid grid-rows-[1fr,min-content] overflow-hidden rounded-xl border-[1px] border-[#ffffff5d]">
             {/* card image  */}
             <div className="relative w-full aspect-[3/2] overflow-hidden">
               <Image
@@ -57,7 +57,7 @@ const TakingTheWrongTrain = ({ id }) => {
             </div>
 
             {/* card details  */}
-            <div className="bg-secondary text-textColor p-3 grid gap-3">
+            <div className="bg-secondary text-textColor p-3 grid gap-3 relative z-10">
               {/* card title  */}
               <p className="text-lg md:text-xl font-medium">{card.title}</p>
 
