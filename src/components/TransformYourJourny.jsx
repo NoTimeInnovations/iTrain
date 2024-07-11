@@ -62,17 +62,17 @@ const TransformYourJourny = ({ id }) => {
     <Section
       id={id}
       className={
-        "bg-primary text-textColor px-5 md:px-20 py-[100px] xl:pt-[120px] xl:px-[200px] "
+        "bg-primary text-textColor py-[100px] xl:pt-[120px] relative"
       }
     >
       {/* title  */}
-      <p className="text-lg font-medium md:text-4xl xl:text-[32px] xl:leading-[40px] text-center">
+      <p className="text-lg font-medium md:text-4xl xl:text-[32px] xl:leading-[40px] text-center px-5 md:px-20 xl:px-[200px]">
         Transform Your Journey to <br className="md:hidden" /> Become a Diamond!
       </p>
 
       {/* swiper  */}
-      <div className="lg:flex lg:flex-col lg:items-center">
-        <div className="relative mt-32 xl:w-[80%]">
+      <div className="w-screen mt-32 px-5 md:px-20 xl:px-[22rem]">
+        <div className="relative">
           <Swiper
             slidesPerView={1}
             spaceBetween={20}
@@ -85,7 +85,7 @@ const TransformYourJourny = ({ id }) => {
               },
             }}
             modules={[Navigation]}
-            className="mySwiper w-full relative "
+            className="mySwiper w-full relative rounded-xl"
           >
             {cardDetails.map((card, index) => (
               <SwiperSlide key={`swiper_card_${index}`} className="w-full">
@@ -102,7 +102,7 @@ const TransformYourJourny = ({ id }) => {
         </div>
 
         {/* swiper buttons  */}
-        <div className="w-full flex justify-center gap-10 md:justify-between xl:max-w-[80%] mt-10">
+        <div className="w-full flex justify-center gap-10 md:justify-between mt-10">
           {/* prev button  */}
           <div
             className="swipe-btn-prev"
@@ -121,7 +121,7 @@ const TransformYourJourny = ({ id }) => {
             <Button bg={"bg-buttonHover"}>Next</Button>
           </div>
         </div>
-      </div>
+      </div> 
     </Section>
   );
 };
