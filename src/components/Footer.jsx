@@ -208,15 +208,9 @@ const Footer = ({ id }) => {
             required
             onChange={(e) => setFormEmail(e.target.value)}
           />
-          <Button
-            type={"submit"}
-            bg={"bg-textColor"}
-            color={"text-buttonHover"}
-            padding={"py-2 px-1 lg:px-3"}
-            textSize={"text-xs md:text-base"}
-          >
-            Subscribe
-          </Button>
+          <button className="text-[#381E72] bg-[#CFBCFF] px-[20px] py-[8px] font-medium text-[14px] rounded-full md:py-[10px] md:text-lg shadow-sm shadow-[#00000042] cursor-pointer select-none active:scale-90 transition-all hover:bg-[#381E72] hover:text-[#CFBCFF]">
+            Submit
+          </button>
         </form>
       </div>
 
