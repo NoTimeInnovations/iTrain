@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 import HamburgerIcon from "./HamburgerIcon";
 import { useCycle } from "framer-motion";
@@ -14,7 +14,7 @@ const NavLinks = ({ children, className, href, onClick }) => {
 };
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useCycle(false, true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
     {
@@ -56,7 +56,7 @@ const Header = () => {
 
       {/* nav backdrop  */}
       <div
-        onClick={() => setIsOpen()}
+        onClick={() => setIsOpen(false)}
         className={`fixed top-0 left-0 bg-[#000000a0] w-screen h-screen z-[49] backdrop-blur-md transition-all duration-500 ${
           !isOpen && "opacity-0 pointer-events-none"
         }`}
@@ -70,11 +70,11 @@ const Header = () => {
       >
         <nav className="grid gap-[40px] lg:grid-flow-col lg:place-items-center">
           {navLinks.slice(0, 3).map((item, index) => (
-            <NavLinks onClick={()=>setIsOpen()} key={`nav_item_${index}`} href={item.link}>
+            <NavLinks onClick={()=>setIsOpen(false)} key={`nav_item_${index}`} href={item.link}>
               {item.text}
             </NavLinks>
           ))}
-          <NavLinks onClick={()=>setIsOpen()} href={navLinks[3].link}>
+          <NavLinks onClick={()=>setIsOpen(false)} href={navLinks[3].link}>
             <Button bg={"bg-secondary"} bgInvert={true}>
               {navLinks[3].text}
             </Button>
