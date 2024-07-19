@@ -8,3 +8,19 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
+
+.bg-pos{
+  background-position: 82% 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .bg-pos{
+    background-position: 96% 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bg-pos{
+    background-position: 50% 50%;
+  }   
+}

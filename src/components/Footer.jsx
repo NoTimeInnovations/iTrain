@@ -39,7 +39,7 @@ const Footer = ({ id }) => {
 
   const visitUsLink = {
     title: "We are here",
-    link: "#",
+    link: "https://maps.app.goo.gl/wbBGUoKMP91d7dGk6",
     icon: "/images/icons/location.svg",
   };
 
