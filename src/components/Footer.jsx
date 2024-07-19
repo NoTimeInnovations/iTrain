@@ -101,132 +101,148 @@ const Footer = ({ id }) => {
   };
 
   return (
-    <footer
-      id={id}
-      className="bg-primary text-textColor p-10 lg:p-20 xl:px-80 xl:py-32 grid gap-10 relative"
-    >
-      <div className="grid gap-10 lg:grid-flow-col">
-        {/* webPageLinks  */}
-        <div className="grid place-items-center gap-3 lg:gap-5 text-center lg:text-start lg:place-items-start h-fit">
-          {/* title  */}
-          <p className="text-lg font-medium lg:text-xl">Quick Links</p>
+    <>
+      <footer
+        id={id}
+        className="bg-primary text-textColor p-10 lg:p-20 xl:px-80 xl:py-32 grid gap-10 relative"
+      >
+        <div className="grid gap-10 lg:grid-flow-col">
+          {/* webPageLinks  */}
+          <div className="grid place-items-center gap-3 lg:gap-5 text-center lg:text-start lg:place-items-start h-fit">
+            {/* title  */}
+            <p className="text-lg font-medium lg:text-xl">Quick Links</p>
 
-          {/* links  */}
-          <div className="grid gap-2">
-            {webPageLinks.map((item, index) => (
-              <Link key={`wepagelinks_${index}`} href={item.link}>
-                {item.title}
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* getInTouchLInks  */}
-        <div className="grid place-items-center gap-3 lg:gap-5 text-center h-fit lg:text-start lg:place-items-start ">
-          {/* title  */}
-          <p className="text-lg font-medium lg:text-xl">Get in touch</p>
-          {/* links  */}
-          <div className="grid place-items-center text-center gap-2 lg:text-start lg:place-items-start">
-            {getInTouchLinks.map((item, index) => (
-              <div
-                key={`getintouchlinks_${index}`}
-                className="flex items-center gap-2 w-fit"
-              >
-                <Image
-                  src={item.icon}
-                  alt={item.title}
-                  width={50}
-                  height={50}
-                  className="w-5"
-                />
-                <Link className="w-fit" href={item.link}>
+            {/* links  */}
+            <div className="grid gap-2">
+              {webPageLinks.map((item, index) => (
+                <Link key={`wepagelinks_${index}`} href={item.link}>
                   {item.title}
                 </Link>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+
+          {/* getInTouchLInks  */}
+          <div className="grid place-items-center gap-3 lg:gap-5 text-center h-fit lg:text-start lg:place-items-start ">
+            {/* title  */}
+            <p className="text-lg font-medium lg:text-xl">Get in touch</p>
+            {/* links  */}
+            <div className="grid place-items-center text-center gap-2 lg:text-start lg:place-items-start">
+              {getInTouchLinks.map((item, index) => (
+                <div
+                  key={`getintouchlinks_${index}`}
+                  className="flex items-center gap-2 w-fit"
+                >
+                  <Image
+                    src={item.icon}
+                    alt={item.title}
+                    width={50}
+                    height={50}
+                    className="w-5"
+                  />
+                  <Link className="w-fit" href={item.link}>
+                    {item.title}
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* visit us link  */}
+          <div className="grid place-items-center text-center gap-3 lg:gap-5 h-fit lg:text-start lg:place-items-start ">
+            {/* title  */}
+            <p className="font-medium text-lg lg:text-xl">Visit us</p>
+
+            {/* link  */}
+            <Link className="flex items-center gap-2" href={visitUsLink.link}>
+              {/* icon  */}
+              <Image
+                src={visitUsLink.icon}
+                width={50}
+                height={50}
+                alt={visitUsLink.title}
+                className="w-5"
+              />
+
+              {/* title  */}
+              <p>{visitUsLink.title}</p>
+            </Link>
+          </div>
+
+          {/* follow us links  */}
+          <div className="grid place-items-center text-center gap-3 lg:gap-5 h-fit lg:text-start lg:place-items-start">
+            {/* title  */}
+            <p className="text-lg font-medium lg:text-xl">Follow us</p>
+
+            {/* links  */}
+            <div className="flex items-center gap-5">
+              {followUsLinks.map((item, index) => (
+                <Link key={`follow_link_${index}`} href={item.link}>
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={50}
+                    height={50}
+                    className="w-8"
+                  />
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* visit us link  */}
-        <div className="grid place-items-center text-center gap-3 lg:gap-5 h-fit lg:text-start lg:place-items-start ">
-          {/* title  */}
-          <p className="font-medium text-lg lg:text-xl">Visit us</p>
+        {/* subscribe to newsletter  */}
+        <div className="grid place-items-center text-center gap-3 lg:gap-5 h-fit lg:grid-flow-col lg:w-fit">
+          <label className="text-lg font-medium lg:text-xl" htmlFor="email">
+            Subscribe to our NewsLetter
+          </label>
 
-          {/* link  */}
-          <Link className="flex items-center gap-2" href={visitUsLink.link}>
-            {/* icon  */}
-            <Image
-              src={visitUsLink.icon}
-              width={50}
-              height={50}
-              alt={visitUsLink.title}
-              className="w-5"
+          <form
+            onSubmit={handleFormSubmit}
+            className="grid grid-cols-[1fr,min-content] bg-[#938F96] rounded place-items-center px-3 md:py-2"
+          >
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              className="w-full placeholder-textColor p-3 bg-transparent focus:outline-none"
+              required
+              onChange={(e) => setFormEmail(e.target.value)}
             />
+            <button className="text-[#381E72] bg-[#CFBCFF] px-[20px] py-[8px] font-medium text-[14px] rounded-full md:py-[10px] md:text-lg shadow-sm shadow-[#00000042] cursor-pointer select-none active:scale-90 transition-all hover:bg-[#381E72] hover:text-[#CFBCFF]">
+              Submit
+            </button>
+          </form>
+        </div>
 
-            {/* title  */}
-            <p>{visitUsLink.title}</p>
+        {/* whastapp  */}
+        <div className="flex justify-end">
+          <Link href={"https://wa.me/919037681744"}>
+            <Image
+              src={"/images/icons/whatsapp.svg"}
+              alt="whatsapp"
+              width={100}
+              height={100}
+              className="w-[60px] xl:absolute xl:bottom-20 xl:right-20"
+            />
           </Link>
         </div>
+      </footer>
 
-        {/* follow us links  */}
-        <div className="grid place-items-center text-center gap-3 lg:gap-5 h-fit lg:text-start lg:place-items-start">
-          {/* title  */}
-          <p className="text-lg font-medium lg:text-xl">Follow us</p>
-
-          {/* links  */}
-          <div className="flex items-center gap-5">
-            {followUsLinks.map((item, index) => (
-              <Link key={`follow_link_${index}`} href={item.link}>
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={50}
-                  height={50}
-                  className="w-8"
-                />
-              </Link>
-            ))}
-          </div>
-        </div>
+      {/* copy right  */}
+      <div className="bg-secondary text-textColor grid place-items-center px-[10px] py-[30px] md:py-[40px] text-center text-xs md:text-base leading-6">
+        <p>
+          {/* itrain title  */}
+          <span className="text-textHoverColor">iTrain Technologies</span>
+          <sup className="text-white font-semibold">TM</sup>{" "}
+          <br className="md:hidden" />
+          <span>
+            2024  |  By MAS DESIGN AND CODE {`(OPC)`} PVT LTD  |  All Rights
+            Reserved
+          </span>
+        </p>
       </div>
-
-      {/* subscribe to newsletter  */}
-      <div className="grid place-items-center text-center gap-3 lg:gap-5 h-fit lg:grid-flow-col lg:w-fit">
-        <label className="text-lg font-medium lg:text-xl" htmlFor="email">
-          Subscribe to our NewsLetter
-        </label>
-
-        <form
-          onSubmit={handleFormSubmit}
-          className="grid grid-cols-[1fr,min-content] bg-[#938F96] rounded place-items-center px-3 md:py-2"
-        >
-          <input
-            type="email"
-            id="email"
-            placeholder="Enter your email"
-            className="w-full placeholder-textColor p-3 bg-transparent focus:outline-none"
-            required
-            onChange={(e) => setFormEmail(e.target.value)}
-          />
-          <button className="text-[#381E72] bg-[#CFBCFF] px-[20px] py-[8px] font-medium text-[14px] rounded-full md:py-[10px] md:text-lg shadow-sm shadow-[#00000042] cursor-pointer select-none active:scale-90 transition-all hover:bg-[#381E72] hover:text-[#CFBCFF]">
-            Submit
-          </button>
-        </form>
-      </div>
-
-      {/* whastapp  */}
-      <div className="flex justify-end">
-        <Link href={"https://wa.me/919037681744"}>
-          <Image
-            src={"/images/icons/whatsapp.svg"}
-            alt="whatsapp"
-            width={100}
-            height={100}
-            className="w-[60px] xl:absolute xl:bottom-20 xl:right-20"
-          />
-        </Link>
-      </div>
-    </footer>
+    </>
   );
 };
 
