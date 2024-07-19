@@ -1,5 +1,5 @@
 import React from "react";
-import Section from "./Section";
+import Section from "../common/Section";
 import Image from "next/image";
 
 const DoorOpensToThoseWhoKnock = ({ id }) => {
@@ -53,7 +53,10 @@ const DoorOpensToThoseWhoKnock = ({ id }) => {
         {cardDetails.map((card, index) => {
           const isEven = index % 2 === 0;
           return (
-            <div key={`Door_opens_card_${index}`} className="bg-primary rounded-full overflow-hidden grid gap-5 max-w-[345px] lg:max-w-full lg:grid-flow-col lg:place-items-center xl:max-w-[80%] xl:gap-10">
+            <div
+              key={`Door_opens_card_${index}`}
+              className="bg-primary rounded-full overflow-hidden grid gap-5 max-w-[345px] lg:max-w-full lg:grid-flow-col lg:place-items-center xl:max-w-[80%] xl:gap-10"
+            >
               {/* card image  */}
               <div className="relative w-full lg:w-[330px] aspect-square rounded-full overflow-hidden">
                 <Image
@@ -65,7 +68,11 @@ const DoorOpensToThoseWhoKnock = ({ id }) => {
               </div>
 
               {/* card details  */}
-              <div className={`px-5 pb-24 grid gap-3 lg:items-center lg:px-20 lg:pb-0 ${ !isEven && 'lg:-order-1' }`}>
+              <div
+                className={`px-5 pb-24 grid gap-3 lg:items-center lg:px-20 lg:pb-0 ${
+                  !isEven && "lg:-order-1"
+                }`}
+              >
                 {/* card title  */}
                 <p className="text-lg md:text-xl font-medium">{card.title}</p>
 

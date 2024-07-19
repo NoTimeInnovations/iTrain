@@ -1,5 +1,5 @@
 import React from "react";
-import Section from "./Section";
+import Section from "../common/Section";
 import Image from "next/image";
 
 const TakingTheWrongTrain = ({ id }) => {
@@ -28,24 +28,34 @@ const TakingTheWrongTrain = ({ id }) => {
   ];
 
   return (
-    <Section id={id} className={"bg-primary px-5 md:px-20 py-[100px] xl:pt-[120px] xl:px-[200px] grid place-items-center "}>
+    <Section
+      id={id}
+      className={
+        "bg-primary px-5 md:px-20 py-[100px] xl:pt-[120px] xl:px-[200px] grid place-items-center "
+      }
+    >
       {/* title and subtitle  */}
       <div className="text-textColor text-center grid gap-5 ">
         {/* title  */}
         <p className="text-lg font-medium md:text-4xl xl:text-[32px] xl:leading-[40px]">
-          Taking the Wrong Train to the <br className="md:hidden" /> Right Destination?
+          Taking the Wrong Train to the <br className="md:hidden" /> Right
+          Destination?
         </p>
 
         {/* subtitle  */}
         <p className="md:text-xl xl:text-[22px] xl:leading-[28px]">
-          Let’s Analyse Where the Wrong <br className="md:hidden" /> Career is Taking You
+          Let’s Analyse Where the Wrong <br className="md:hidden" /> Career is
+          Taking You
         </p>
       </div>
 
       {/* cards  */}
       <div className="grid place-items-center mt-10 gap-10 lg:grid-flow-col lg:place-items-start lg:gap-5 lg:mt-20 xl:mt-32 ">
         {cardDetails.map((card, index) => (
-          <div key={`Taking_the_wrong_way_card_${index}`} className="w-full max-w-[350px] h-[450px] md:max-w-[400px] grid grid-rows-[1fr,min-content] overflow-hidden rounded-xl border-[1px] border-[#ffffff5d]">
+          <div
+            key={`Taking_the_wrong_way_card_${index}`}
+            className="w-full max-w-[350px] h-[450px] md:max-w-[400px] grid grid-rows-[1fr,min-content] overflow-hidden rounded-xl border-[1px] border-[#ffffff5d]"
+          >
             {/* card image  */}
             <div className="relative w-full aspect-[3/2] overflow-hidden">
               <Image

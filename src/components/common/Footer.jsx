@@ -237,7 +237,7 @@ const Footer = ({ id }) => {
           <sup className="text-white font-semibold">TM</sup>{" "}
           <br className="md:hidden" />
           <span>
-            2024  |  By MAS DESIGN AND CODE {`(OPC)`} PVT LTD  |  All Rights
+            2024 | By MAS DESIGN AND CODE {`(OPC)`} PVT LTD | All Rights
             Reserved
           </span>
         </p>

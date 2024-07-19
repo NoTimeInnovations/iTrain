@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./Header";
-import Section from "./Section";
-import Button from "./Button";
+import Header from "../common/Header";
+import Section from "../common/Section";
+import Button from "../common/Button";
 import Link from "next/link";
 
 const HeroSection = ({ id }) => {
@@ -24,7 +24,7 @@ const HeroSection = ({ id }) => {
         </p>
 
         {/* button  */}
-        <Link href={'#right-train'}>
+        <Link href={"#right-train"}>
           <Button
             bg={"bg-white"}
             color={"text-black"}

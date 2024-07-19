@@ -1,7 +1,7 @@
 import React from "react";
-import Section from "./Section";
+import Section from "../common/Section";
 import Image from "next/image";
-import Button from "./Button";
+import Button from "../common/Button";
 import Link from "next/link";
 
 const EnteringIntoTheRightTrain = ({ id }) => {

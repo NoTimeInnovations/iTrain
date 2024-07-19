@@ -3,11 +3,14 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Button from "./Button";
 import HamburgerIcon from "./HamburgerIcon";
-import { useCycle } from "framer-motion";
 
 const NavLinks = ({ children, className, href, onClick }) => {
   return (
-    <Link onClick={onClick} className={`${className} hover:text-textHoverColor`} href={href}>
+    <Link
+      onClick={onClick}
+      className={`${className} hover:text-textHoverColor`}
+      href={href}
+    >
       {children}
     </Link>
   );
@@ -70,11 +73,15 @@ const Header = () => {
       >
         <nav className="grid gap-[40px] lg:grid-flow-col lg:place-items-center">
           {navLinks.slice(0, 3).map((item, index) => (
-            <NavLinks onClick={()=>setIsOpen(false)} key={`nav_item_${index}`} href={item.link}>
+            <NavLinks
+              onClick={() => setIsOpen(false)}
+              key={`nav_item_${index}`}
+              href={item.link}
+            >
               {item.text}
             </NavLinks>
           ))}
-          <NavLinks onClick={()=>setIsOpen(false)} href={navLinks[3].link}>
+          <NavLinks onClick={() => setIsOpen(false)} href={navLinks[3].link}>
             <Button bg={"bg-secondary"} bgInvert={true}>
               {navLinks[3].text}
             </Button>

@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
-import Section from "./Section";
+import Section from "../common/Section";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation } from "swiper/modules";
-import Button from "./Button";
+import Button from "../common/Button";
 
 const Card = ({ image, title, description }) => {
   return (
@@ -61,9 +61,7 @@ const TransformYourJourny = ({ id }) => {
   return (
     <Section
       id={id}
-      className={
-        "bg-primary text-textColor py-[100px] xl:pt-[120px] relative"
-      }
+      className={"bg-primary text-textColor py-[100px] xl:pt-[120px] relative"}
     >
       {/* title  */}
       <p className="text-lg font-medium md:text-4xl xl:text-[32px] xl:leading-[40px] text-center px-5 md:px-20 xl:px-[200px]">
@@ -121,7 +119,7 @@ const TransformYourJourny = ({ id }) => {
             <Button bg={"bg-buttonHover"}>Next</Button>
           </div>
         </div>
-      </div> 
+      </div>
     </Section>
   );
 };
