@@ -22,7 +22,7 @@ const Header = () => {
   const navLinks = [
     {
       text: "Home",
-      link: "#hero",
+      link: "/#hero",
     },
     {
       text: "About",
