@@ -30,7 +30,7 @@ const Header = () => {
     },
     {
       text: "Courses",
-      link: "#right-train",
+      link: "/courses",
     },
     {
       text: "Contact",
