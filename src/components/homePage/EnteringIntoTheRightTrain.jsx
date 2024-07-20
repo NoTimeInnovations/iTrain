@@ -3,6 +3,8 @@ import Section from "../common/Section";
 import Image from "next/image";
 import Button from "../common/Button";
 import Link from "next/link";
+import SubTitle from "../common/SubTitle";
+import Title from "../common/Title";
 
 const EnteringIntoTheRightTrain = ({ id }) => {
   const cardDetails = [
@@ -66,15 +68,13 @@ const EnteringIntoTheRightTrain = ({ id }) => {
       {/* title and subtitle  */}
       <div className="text-textColor text-center grid gap-5 ">
         {/* title  */}
-        <p className="text-lg font-medium md:text-4xl xl:text-[32px] xl:leading-[40px]">
+        <Title>
           Entering into the right train, the{" "}
           <span className="text-textHoverColor">iTrain</span>
-        </p>
+        </Title>
 
         {/* subtitle  */}
-        <p className="md:text-xl xl:text-[22px] xl:leading-[28px]">
-          We Provide More Value than You Spent
-        </p>
+        <SubTitle> We Provide More Value than You Spent</SubTitle>
       </div>
 
       {/* cards  */}

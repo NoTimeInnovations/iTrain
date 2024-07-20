@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "../common/Section";
 import Image from "next/image";
+import Title from "../common/Title";
 
 const DoorOpensToThoseWhoKnock = ({ id }) => {
   const cardDetails = [
@@ -44,9 +45,7 @@ const DoorOpensToThoseWhoKnock = ({ id }) => {
       }
     >
       {/* title  */}
-      <p className="text-lg font-medium md:text-4xl xl:text-[32px] xl:leading-[40px] text-center">
-        The Door Opens to Those Who Knock!{" "}
-      </p>
+      <Title> The Door Opens to Those Who Knock! </Title>
 
       {/* cards  */}
       <div className="mt-10 grid gap-10 place-items-center lg:mt-20">

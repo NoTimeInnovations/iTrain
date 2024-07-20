@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "../common/Section";
 import Image from "next/image";
+import Title from "../common/Title";
 
 const Card = ({ image, title }) => {
   return (
@@ -45,9 +46,7 @@ const TheThreeStepProcess = ({ id }) => {
       }
     >
       {/* title  */}
-      <p className="text-lg font-medium md:text-4xl xl:text-[32px] xl:leading-[40px] text-center">
-        The Three Step Process
-      </p>
+      <Title>The Three Step Process</Title>
 
       {/* cards container  */}
       <div className="grid gap-10 md:gap-20 mt-10 lg:grid-flow-col lg:gap-10 xl:gap-24">

@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation } from "swiper/modules";
 import Button from "../common/Button";
+import Title from "../common/Title";
 
 const Card = ({ image, title, description }) => {
   return (
@@ -64,9 +65,9 @@ const TransformYourJourny = ({ id }) => {
       className={"bg-primary text-textColor py-[100px] xl:pt-[120px] relative"}
     >
       {/* title  */}
-      <p className="text-lg font-medium md:text-4xl xl:text-[32px] xl:leading-[40px] text-center px-5 md:px-20 xl:px-[200px]">
+      <Title>
         Transform Your Journey to <br className="md:hidden" /> Become a Diamond!
-      </p>
+      </Title>
 
       {/* swiper  */}
       <div className="w-screen mt-32 px-5 md:px-20 xl:px-[22rem]">
