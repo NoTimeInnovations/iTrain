@@ -77,7 +77,7 @@ const HeroSection = () => {
               className="grid gap-5 lg:grid-flow-col"
             >
               {/* image  */}
-              <div className={`relative aspect-[6/4] w-full ${index == 0 && 'lg:order-2'} lg:max-w-[600px]`}>
+              <div className={`relative aspect-[6/4] w-full ${index == 0 && 'lg:order-2'} lg:max-w-[600px] rounded-md overflow-hidden`}>
                 <Image
                   src={c.image}
                   alt={c.title}

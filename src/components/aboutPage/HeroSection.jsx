@@ -39,7 +39,7 @@ const HeroSection = () => {
         {/* image and descirption  */}
         <div className="grid gap-10 lg:grid-flow-col place-items-center ">
           {/* imagae  */}
-          <div className="relative w-full aspect-square max-w-[600px] lg:order-2 lg:w-[400px]">
+          <div className="relative w-full aspect-square max-w-[600px] lg:order-2 lg:w-[400px] rounded-md overflow-hidden">
             <Image
               src={
                 "/images/Rise to the Top. From Undesirable to Undeniable/phoenix.png"
