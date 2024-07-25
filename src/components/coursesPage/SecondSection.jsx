@@ -6,6 +6,7 @@ import "swiper/css";
 import Title from "../common/Title";
 import SubTitle from "../common/SubTitle";
 import Image from "next/image";
+import SwiperCard from "./SwiperCard";
 
 const SecondSection = () => {
   const contents = [
@@ -22,51 +23,38 @@ const SecondSection = () => {
         "More than just a course, it's a launchpad. Yes, Believe that! Get ready to redefine your creator energies by joining our vibrant community of designers and collaborate on exciting projects. Whether you're a budding artist or someone looking to switch careers, our course empowers you to turn your passion into a profitable profession.",
       ],
     },
+    {
+      mainTitle: "Development courses, not everyone’s cup of tea  ",
+      mainSubTitle:
+        "Not tea? Then definitely Coffee; coz Coffee boosts Creativity.So does our Design Courses",
+      image: "/images/Art or Math Creativity or Development/2.jpeg",
+      title: "UI/UX Designing Basic",
+      subTitle: "See the World Through Your User's Eyes!",
+      descriptions: [
+        "Picture yourself as a wizard, crafting digital worlds of Businesses, where you magnetize the user’s eyes for an impressive visit. Our UI/UX Designing Basic  course is your first spellbook where you learn to read people's minds, understanding what makes them tick, what frustrates them, and what makes them smile. From sketching out the land to filling it with wonder, you'll discover the secret language of design.",
+        "Master the essential tools of the trade such as Adobe Photoshop, Adobe Illustrator and Figma to bring your magical ideas to transform and get a life. From creating wireframes that outline the user journey to crafting high-fidelity mockups that breathe life into your designs, you'll gain the practical skills needed to bring your ideas to life.",
+      ],
+    },
+    {
+      mainTitle: "Development courses, not everyone’s cup of tea  ",
+      mainSubTitle:
+        "Not tea? Then definitely Coffee; coz Coffee boosts Creativity.So does our Design Courses",
+      image: "/images/Art or Math Creativity or Development/3.jpeg",
+      title: "UI/UX Designing Advanced",
+      subTitle: "The Art of User Enchantment",
+      descriptions: [
+        " Our  UI/UX  Designing Advanced course is for those who seek to weave digital tapestries that captivate souls. You'll journey deep into the human heart, learning the language of emotions, desires, and the unspoken needs that shape experiences. This isn't just about creating interfaces, it's about crafting digital symphonies that leave an mark on the user’s experience.",
+        "With Figma as your brush guided by the design systems of Google and Apple,  you'll paint with animations, micro-interactions, and prototypes for Web and Mobile platforms. You'll become a detective, uncovering user insights through rigorous testing, and an alchemist, transforming those insights into gold.",
+      ],
+    },
   ];
 
   return (
     <Section className={`bg-primary min-h-screen`}>
-      {/* swiper card  */}
-      <div className="w-full min-h-screen text-textColor px-5 md:px-20 py-[100px] xl:px-[200px]">
-        {/* titile and subtitle  */}
-        <div className="place-items-center text-center grid gap-5 ">
-          {/* title  */}
-          <Title>{contents[0].mainTitle}</Title>
-          {/* subtitle  */}
-          <SubTitle className={`max-w-[400px]`}>{contents[0].mainSubTitle}</SubTitle>
-        </div>
-
-        {/* contents  */}
-        <main className="grid place-items-center mt-10 gap-5 md:gap-10 lg:grid-flow-col lg:mt-20 ">
-          {/* image  */}
-          <div className="relative w-[80%] aspect-square rounded-full overflow-hidden lg:w-[300px] xl:w-[500px]">
-            <Image
-              src={contents[0].image}
-              fill
-              alt="image"
-              className="object-cover w-full h-full"
-            />
-          </div>
-
-          {/* title and descriptions  */}
-          <div className="grid gap-8 xl:max-w-[800px]">
-
-            {/* title and subtitle  */}
-            <div className="grid place-items-center">
-              {/* title  */}
-              <p className="text-lg font-medium md:text-2xl">{contents[0].title}</p>
-              {/* subtitle  */}
-              <p className="text-sm md:text-lg ">{contents[0].subTitle}</p>
-            </div>
-
-            {/* descriptions  */}
-            <div className="grid gap-5 xl:text-[17px]" >
-              {contents[0].descriptions.map((dec, index) => (
-                <p>{dec}</p>
-              ))}
-            </div>
-          </div>
-        </main>
+      <div>
+        {contents?.map((c, index) => (
+          <SwiperCard content={c} />
+        ))}
       </div>
     </Section>
   );
