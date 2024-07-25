@@ -9,7 +9,7 @@ const TheWavingGreenFlag = ({ id }) => {
     <Section
       id={id}
       style={{ backgroundImage: `url('/images/Green Flag/bg-image.png')` }}
-      className={`bg-cover bg-pos relative `}
+      className={`bg-cover green-bg-pos relative `}
     >
       {/* contents  */}
       <div className="min-h-screen backdrop-brightness-[20%] px-5 md:px-20 py-[100px] xl:pt-[120px] xl:px-[200px] grid place-items-center">
