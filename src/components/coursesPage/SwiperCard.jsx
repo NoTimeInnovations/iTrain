@@ -9,7 +9,7 @@ const SwiperCard = ({ content }) => {
       {/* titile and subtitle  */}
       <div className="place-items-center text-center grid gap-5 ">
         {/* title  */}
-        <Title>{content.mainTitle}</Title>
+        <Title className={`max-w-[80%] lg:max-w-[70%]`} >{content.mainTitle}</Title>
         {/* subtitle  */}
         <SubTitle className={`max-w-[400px] lg:max-w-[70%]`}>
           {content.mainSubTitle}
@@ -43,7 +43,7 @@ const SwiperCard = ({ content }) => {
           {/* descriptions  */}
           <div className="grid gap-5 xl:text-[17px]">
             {content.descriptions.map((dec, index) => (
-              <p>{dec}</p>
+              <p key={`${content.title}_description_${index}`}>{dec}</p>
             ))}
           </div>
         </div>

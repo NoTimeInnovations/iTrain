@@ -2,11 +2,8 @@ import React from "react";
 import Section from "../common/Section";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-import "swiper/css";
-import Title from "../common/Title";
-import SubTitle from "../common/SubTitle";
-import Image from "next/image";
 import SwiperCard from "./SwiperCard";
+import "swiper/css";
 
 const SecondSection = () => {
   const contents = [
@@ -50,12 +47,27 @@ const SecondSection = () => {
   ];
 
   return (
-    <Section className={`bg-primary min-h-screen`}>
-      <div>
+    <Section className={`bg-primary min-h-screen relative`}>
+      {/* swiper  */}
+      <Swiper
+        pagination={{
+          el: ".swiper-pagination",
+          renderBullet: (index, className) => {
+            return `<span class="${className} custom-bullet"></span>`;
+          },
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
         {contents?.map((c, index) => (
-          <SwiperCard content={c} />
+          <SwiperSlide key={`courses_swiper_card_${index}`}>
+            <SwiperCard content={c} />
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
+
+      {/* pagination container  */}
+      <div className="swiper-pagination flex items-center justify-center absolute bottom-20 md:bottom-10 xl:bottom-32 left-1/2 -translate-x-1/2 gap-2"></div>
     </Section>
   );
 };

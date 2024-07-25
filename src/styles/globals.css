@@ -24,3 +24,24 @@
     background-position: 50% 50%;
   }   
 }
+
+
+.swiper-pagination .custom-bullet {
+  background-color: #a5a1ac49;
+  width: 50px;
+  height: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #A5A1AC;
+}
+
+@media screen and (min-width: 1024px) {
+  .swiper-pagination .custom-bullet {
+    width: 60px;
+    height: 7px;
+  }
+}

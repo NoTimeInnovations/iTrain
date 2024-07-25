@@ -24,7 +24,7 @@ const HeroSection = ({ id }) => {
         </p>
 
         {/* button  */}
-        <Link href={"#right-train"}>
+        <Link href={"https://www.youtube.com/watch?v=SM7Pdhir1D4"}>
           <Button
             bg={"bg-white"}
             color={"text-black"}
