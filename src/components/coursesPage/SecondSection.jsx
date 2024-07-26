@@ -4,6 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import SwiperCard from "./SwiperCard";
 import "swiper/css";
+import image1 from "../../../public/images/Art or Math Creativity or Development/1.jpeg"
+import image2 from "../../../public/images/Art or Math Creativity or Development/2.jpeg"
+import image3 from "../../../public/images/Art or Math Creativity or Development/3.jpeg"
+
 
 const SecondSection = () => {
   const contents = [
@@ -11,7 +15,7 @@ const SecondSection = () => {
       mainTitle: "Art or Math? Creativity or Development?",
       mainSubTitle:
         "Some People Prefer Coffee over Tea, spilling Creativity on Designs",
-      image: "/images/Art or Math Creativity or Development/1.jpeg",
+      image: image1,
       title: "Graphic Designing",
       subTitle: "Learn the Art and Science of Design",
       descriptions: [
@@ -24,7 +28,7 @@ const SecondSection = () => {
       mainTitle: "Development courses, not everyone’s cup of tea  ",
       mainSubTitle:
         "Not tea? Then definitely Coffee; coz Coffee boosts Creativity.So does our Design Courses",
-      image: "/images/Art or Math Creativity or Development/2.jpeg",
+      image: image2,
       title: "UI/UX Designing Basic",
       subTitle: "See the World Through Your User's Eyes!",
       descriptions: [
@@ -36,7 +40,7 @@ const SecondSection = () => {
       mainTitle: "Development courses, not everyone’s cup of tea  ",
       mainSubTitle:
         "Not tea? Then definitely Coffee; coz Coffee boosts Creativity.So does our Design Courses",
-      image: "/images/Art or Math Creativity or Development/3.jpeg",
+      image: image3,
       title: "UI/UX Designing Advanced",
       subTitle: "The Art of User Enchantment",
       descriptions: [

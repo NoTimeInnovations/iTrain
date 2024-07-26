@@ -5,10 +5,11 @@ import SubTitle from "../common/SubTitle";
 import Link from "next/link";
 import Button from "../common/Button";
 import Image from "next/image";
+import image1 from "../../../public/images/World is Digital .Traditional Marketing/1st image.png";
 
 const WorldisDigitalTM = () => {
   const content = {
-    image: "/images/World is Digital .Traditional Marketing/1st image.png",
+    image: image1,
     title: {
         part1 : `World is Digital`,
         part2 : `Traditional Marketing`
@@ -54,6 +55,8 @@ const WorldisDigitalTM = () => {
             src={content.image}
             alt={content.title}
             fill
+            placeholder="blur"
+            loading="lazy"
             className="object-cover w-full h-full rounded-md"
           />
         </div>

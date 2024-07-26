@@ -6,11 +6,14 @@ import SubTitle from "../common/SubTitle";
 import Image from "next/image";
 import Button from "../common/Button";
 import Link from "next/link";
+import image1 from "../../../public/images/iTrain your Left Brain/flutter.png"; 
+import image2 from "../../../public/images/iTrain your Left Brain/ui ux development.png"; 
+
 
 const HeroSection = () => {
   const contents = [
     {
-      image: "/images/iTrain your Left Brain/flutter.png",
+      image: image1,
       title: "Flutter",
       subTitle: "Build Mobile Apps that Dominate",
       points: [
@@ -28,7 +31,7 @@ const HeroSection = () => {
       btnLink: "#",
     },
     {
-      image: "/images/iTrain your Left Brain/ui ux development.png",
+      image: image2,
       title: "UI/UX Development",
       subTitle: "When Designing Meets REALISM",
       points: [
@@ -82,6 +85,8 @@ const HeroSection = () => {
                   src={c.image}
                   alt={c.title}
                   fill
+                  placeholder="blur"
+                  loading="lazy"
                   className="object-cover w-full h-full"
                 />
               </div>

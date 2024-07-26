@@ -24,6 +24,8 @@ const SwiperCard = ({ content }) => {
             src={content.image}
             fill
             alt="image"
+            placeholder="blur"
+            loading="lazy"
             className="object-cover w-full h-full"
           />
         </div>
