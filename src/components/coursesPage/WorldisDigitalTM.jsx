@@ -22,7 +22,7 @@ const WorldisDigitalTM = () => {
       `Learn to navigate the digital landscape, understand consumer behavior, craft compelling narratives, and harness the power of data. From SEO that makes your website irresistible to social media magic that builds communities, you'll discover the strategies to skyrocket your brand.`,
       `Whether you're a budding entrepreneur or a seasoned marketer looking to sharpen your skills, our course will equip you with the tools to succeed in the digital age.`,
     ],
-    btnLink: "#",
+    btnLink: "https://wa.me/919037681744",
   };
 
   return (
