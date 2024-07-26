@@ -55,6 +55,7 @@ const Header = () => {
           alt="i train logo"
           width={200}
           height={200}
+          loading="eager"
           className="w-[150px] lg:w-[200px]"
         />
       </Link>
