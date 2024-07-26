@@ -20,18 +20,41 @@ const HeroSection = () => {
     },
   ];
 
+  const socialLinks = [
+    {
+      title: "whatsapp",
+      icon: "/images/icons/whatsapp.svg",
+      link: "",
+    },
+    {
+      title: "facebook",
+      icon: "/images/icons/facebook.svg",
+      link: "",
+    },
+    {
+      title: "instagram",
+      icon: "/images/icons/instagram.svg",
+      link: "",
+    },
+    {
+      title: "linkedin",
+      icon: "/images/icons/linkedin.svg",
+      link: "",
+    },
+  ];
+
   return (
-    <Section className={"bg-secondary grid grid-rows-[min-content,1fr]"}>
+    <Section className={"bg-secondary grid grid-rows-[min-content,1fr] "}>
       <Header />
 
       {/* main contents  */}
-      <div className="text-textColor p-5 md:px-20 lg:px-40 xl:px-[200px] ">
+      <div className="text-textColor p-5 md:px-20 lg:px-40 xl:px-[200px] grid place-content-center gap-5 md:gap-10 xl:gap-20">
         {/* title  */}
         <Title>Book an Demo</Title>
 
-        <div className="grid gap-5 mt-5">
+        <div className="grid gap-10 h-full lg:grid-flow-col">
           {/* image  */}
-          <div className="relative w-full aspect-video">
+          <div className="relative w-full min-w-[80vw] md:min-w-[60vw] lg:min-w-[50vw] xl:min-w-[40vw] aspect-video overflow-hidden rounded">
             <Image
               src={"/images/ContactUs/hero-section.jpeg"}
               alt="contact-us"
@@ -41,16 +64,19 @@ const HeroSection = () => {
           </div>
 
           {/* details  */}
-          <div>
+          <div className="grid gap-10 h-fit">
             {/* contacts */}
-            <div className="grid gap-3 place-items-center text-center">
+            <div className="grid gap-3 place-items-center text-center lg:text-start lg:place-items-start grid-rows-[min-content,1fr]">
               {/* title */}
-              <p className="font-semibold text-lg">Call / Email</p>
+              <p className="font-semibold lg:text-lg h-fit xl:text-xl">Call / Email</p>
 
               {/* values  */}
-              <div className="grid gap-1">
+              <div className="grid gap-1 w-full lg:min-w-[280px] xl:gap-5">
                 {contacts.map((c, index) => (
-                  <div key={`contact_${c.title}`} className="flex items-center gap-2 justify-center text-center" >
+                  <div
+                    key={`contact_${c.title}`}
+                    className="flex items-center gap-2 justify-center text-center lg:justify-start lg:text-start lg:text-lg"
+                  >
                     {/* Image  */}
                     <Image src={c.icon} alt={c.title} width={20} height={20} />
 
@@ -70,9 +96,42 @@ const HeroSection = () => {
             </div>
 
             {/* drop a messaage  */}
-            <div>
-              
+            <div className="grid gap-4 place-items-center lg:place-items-start grid-rows-[min-content,1fr] h-fit">
+              {/* title  */}
+              <p className="font-semibold lg:text-lg xl:text-xl" >Drop a message</p>
+
+              {/* links  */}
+              <div className="grid grid-flow-col place-items-center gap-10 lg:place-items-start lg:gap-3 xl:gap-5">
+                {
+                  socialLinks.map((sl,index)=>(
+                    <Link key={`social_link_${sl.title}`} href={sl.link}>
+                      <Image
+                        src={sl.icon}
+                        alt={sl.title}
+                        width={25}
+                        height={25}
+                        className="brightness-200 contrast-200 saturate-0 lg:w-[30px] lg:h-[30px]"
+                      />
+                    </Link>
+                  ))
+                }
+              </div>
             </div>
+
+            {/* meet in person  */}
+            <Link href={''} className="flex items-center justify-center gap-2 font-medium lg:justify-start lg:text-lg xl:text-xl">
+                {/* icon  */}
+                <Image
+                  src="/images/icons/location.svg"
+                  alt="location"
+                  width={20}
+                  height={20}
+                  className="xl:w-[30px] xl:h-[30px]"
+                />
+
+                {/* value  */}
+                <p>Meet In Person</p>
+            </Link>
           </div>
         </div>
       </div>
