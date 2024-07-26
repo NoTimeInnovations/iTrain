@@ -3,6 +3,7 @@ import Section from "../common/Section";
 import Header from "../common/Header";
 import Image from "next/image";
 import Title from "../common/Title";
+import phenixImage from "../../../public/images/Rise to the Top. From Undesirable to Undeniable/phoenix.png"
 
 const HeroSection = () => {
   const HeroSectionParagraphs = [
@@ -41,11 +42,11 @@ const HeroSection = () => {
           {/* imagae  */}
           <div className="relative w-full aspect-square max-w-[600px] lg:order-2 lg:w-[400px] rounded-md overflow-hidden">
             <Image
-              src={
-                "/images/Rise to the Top. From Undesirable to Undeniable/phoenix.png"
-              }
+              src={phenixImage}
               alt="phoenix"
               fill
+              placeholder="blur"
+              loading="lazy"
               className="object-contain w-full h-full"
             />
           </div>
