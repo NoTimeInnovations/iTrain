@@ -1,14 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "./Button";
 import HamburgerIcon from "./HamburgerIcon";
+import { usePathname } from "next/navigation";
 
-const NavLinks = ({ children, className, href, onClick }) => {
+const NavLinks = ({ children, className, href, onClick, isActive }) => {
   return (
     <Link
       onClick={onClick}
-      className={`${className} hover:text-textHoverColor`}
+      className={`${className} hover:text-textHoverColor ${isActive ? 'text-textHoverColor' : ""}`}
       href={href}
     >
       {children}
@@ -18,11 +19,12 @@ const NavLinks = ({ children, className, href, onClick }) => {
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const navLinks = [
     {
       text: "Home",
-      link: "/#hero",
+      link: "/",
     },
     {
       text: "About",
@@ -34,9 +36,13 @@ const Header = () => {
     },
     {
       text: "Contact",
-      link: "#footer",
+      link: "/contact-us",
     },
   ];
+
+  useEffect(()=>{
+    console.log(pathname);
+  },[pathname])
 
   return (
     <header className="bg-primary px-5 md:px-20 lg:px-40 xl:px-[194px] flex items-center justify-between text-textColor">
@@ -74,6 +80,7 @@ const Header = () => {
         <nav className="grid gap-[40px] lg:grid-flow-col lg:place-items-center">
           {navLinks.slice(0, 3).map((item, index) => (
             <NavLinks
+              isActive={ pathname === item.link }
               onClick={() => setIsOpen(false)}
               key={`nav_item_${index}`}
               href={item.link}
@@ -82,7 +89,7 @@ const Header = () => {
             </NavLinks>
           ))}
           <NavLinks onClick={() => setIsOpen(false)} href={navLinks[3].link}>
-            <Button bg={"bg-secondary"} bgInvert={true}>
+            <Button bg={ pathname === navLinks[3].link ? "bg-buttonHover" : "bg-secondary" } bgInvert={ pathname !== navLinks[3].link }>
               {navLinks[3].text}
             </Button>
           </NavLinks>
