@@ -34,6 +34,7 @@ const TheWavingGreenFlag = ({ id }) => {
             src={"/images/Green Flag/center-image.svg"}
             alt="green flag"
             fill
+            loading="lazy"
             className="object-cover w-full h-full"
           />
         </div>

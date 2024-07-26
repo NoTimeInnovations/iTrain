@@ -5,11 +5,15 @@ import Button from "../common/Button";
 import Link from "next/link";
 import SubTitle from "../common/SubTitle";
 import Title from "../common/Title";
+import image1 from "../../../public/images/Getting to the right train the iTrain/1st image.png"
+import image2 from "../../../public/images/Getting to the right train the iTrain/2nd image.jpg"
+import image3 from "../../../public/images/Getting to the right train the iTrain/3rd image.jpg"
+
 
 const EnteringIntoTheRightTrain = ({ id }) => {
   const cardDetails = [
     {
-      image: "/images/Getting to the right train, the iTrain/1st image.png",
+      image: image1,
       title: "The 50% Fee Category",
       description:
         "For those who are Currently in College or Recently transitioned from Student Life, or a Person preferring Online Skill-up Courses Remotely through Live Sessions over Recorded Videos, we have got you covered.",
@@ -25,7 +29,7 @@ const EnteringIntoTheRightTrain = ({ id }) => {
       },
     },
     {
-      image: "/images/Getting to the right train, the iTrain/2nd image.jpg",
+      image: image2,
       title: "Housewives and Professionals",
       description:
         "All is Well, for Those Who want to Change the Track. Are You a housewife looking to restart career in IT after a break, Or a working professional in demand of learning a new skill for better career prospects?",
@@ -41,7 +45,7 @@ const EnteringIntoTheRightTrain = ({ id }) => {
       },
     },
     {
-      image: "/images/Getting to the right train, the iTrain/3rd image.jpg",
+      image: image3,
       title: "The future iTrainers",
       description:
         "Are you an Ongoing Working Professional, who is profoundly skilled up in a Discipline? Someone in notice period? Someone who is no longer into full time job but still enjoys training others? ",
@@ -90,6 +94,8 @@ const EnteringIntoTheRightTrain = ({ id }) => {
                 src={card.image}
                 alt={card.title}
                 fill
+                loading="lazy"
+                placeholder="blur"
                 className="w-full h-full object-cover"
               />
             </div>

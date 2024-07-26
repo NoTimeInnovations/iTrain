@@ -3,26 +3,27 @@ import Section from "../common/Section";
 import Image from "next/image";
 import Title from "../common/Title";
 import SubTitle from "../common/SubTitle";
+import image1 from "../../../public/images/Taking the Wrong Train to the Right Destination/1st image.jpg"
+import image2 from "../../../public/images/Taking the Wrong Train to the Right Destination/2nd image.jpg"
+import image3 from "../../../public/images/Taking the Wrong Train to the Right Destination/3rd image.jpg"
+
 
 const TakingTheWrongTrain = ({ id }) => {
   const cardDetails = [
     {
-      image:
-        "/images/Taking the Wrong Train to the Right Destination/1st image.jpg",
+      image: image1,
       title: "The Never-Ending 9-6 Loop",
       description:
         "How long will this over-stressed, low-paid,  lay-off threatening job keep marking your attendance? You were skilled, but its relevance is in the past tense as of 2024! Yes, it can be relevant once you learned, But Now Your Next Action should be to Pull the trigger before it inch close to the dead-end.",
     },
     {
-      image:
-        "/images/Taking the Wrong Train to the Right Destination/2nd image.jpg",
+      image: image2,
       title: "A Generation of the Generators",
       description:
         "An Upcoming News Headline of Creating an AI-Generated Human Clone is Days Near! AI isn't taking over, it's creating new opportunities for those who can move together with the Digital World. Just as Copywriters became Prompt Engineers, the Right Skills will Fill Up Your Pockets! ",
     },
     {
-      image:
-        "/images/Taking the Wrong Train to the Right Destination/3rd image.jpg",
+      image: image3,
       title: "The World is Online",
       description:
         "From the Dawn to Dusk, Even your First and the Last Daily Routines are Digital or Online “Empowered”. It’s all powered by Digital Screens. Tech industry is Booming as all aspirants strive to upgrade everyday, just as any of your Mobile Application avoiding to get Uninstalled.",
@@ -64,6 +65,8 @@ const TakingTheWrongTrain = ({ id }) => {
                 src={card.image}
                 alt={card.title}
                 fill
+                placeholder="blur"
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             </div>

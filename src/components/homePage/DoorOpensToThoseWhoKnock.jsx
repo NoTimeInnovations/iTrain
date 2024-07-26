@@ -2,35 +2,40 @@ import React from "react";
 import Section from "../common/Section";
 import Image from "next/image";
 import Title from "../common/Title";
+import image1 from "../../../public/images/The Door Opens to Those Who Knock/1st image.jpg"
+import image2 from "../../../public/images/The Door Opens to Those Who Knock/2nd image.jpg"
+import image3 from "../../../public/images/The Door Opens to Those Who Knock/3rd image.jpg"
+import image4 from "../../../public/images/The Door Opens to Those Who Knock/4th image.jpg"
+import image5 from "../../../public/images/The Door Opens to Those Who Knock/5th image.jpg"
 
 const DoorOpensToThoseWhoKnock = ({ id }) => {
   const cardDetails = [
     {
-      image: "/images/The Door Opens to Those Who Knock!/1st image.jpg",
+      image: image1,
       title: "Your Digital Classroom",
       description:
         "iTrain Technologies offers a comprehensive library of the high income skill courses in the most-demanded skills of 2024 just to keep you Super Relevant. All courses are accessible from the comfort of your home or your favorite coffee shop!",
     },
     {
-      image: "/images/The Door Opens to Those Who Knock!/2nd image.jpg",
+      image: image2,
       title: "Expert Trainers & Real-World Experience",
       description:
         "Rome wasn’t Built is a Day, So as Experience! Our Professional faculty priorities practical knowledge over theoretical lessons, skyrocketing your learning process.",
     },
     {
-      image: "/images/The Door Opens to Those Who Knock!/3rd image.jpg",
+      image: image3,
       title: "Flexible Learning, Affordable Rates",
       description:
         "Learning is always our first Priority! Learn at your own pace, with flexible scheduling and financing options to fit your budget.",
     },
     {
-      image: "/images/The Door Opens to Those Who Knock!/4th image.jpg",
+      image: image4,
       title: "Join the Room of Passion & Innovation",
       description:
         "Connect with fellow learners who are industry updated, and join the network with industry professionals, to create a support system for your tech journey.",
     },
     {
-      image: "/images/The Door Opens to Those Who Knock!/5th image.jpg",
+      image: image5,
       title: "Start Earning After Certification",
       description:
         "Learning is always our first Priority! Learn at your own pace, with flexible scheduling and financing options to fit your budget.",
@@ -62,6 +67,8 @@ const DoorOpensToThoseWhoKnock = ({ id }) => {
                   src={card.image}
                   alt={card.title}
                   fill
+                  loading="lazy"
+                  placeholder="blur"
                   className="w-full h-full object-cover"
                 />
               </div>

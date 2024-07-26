@@ -6,6 +6,10 @@ import "swiper/css";
 import { Navigation } from "swiper/modules";
 import Button from "../common/Button";
 import Title from "../common/Title";
+import image1 from "../../../public/images/Transform Your Journey to Become a Diamond/1st Image.jpg"
+import image2 from "../../../public/images/Transform Your Journey to Become a Diamond/2nd image.jpg"
+import image3 from "../../../public/images/Transform Your Journey to Become a Diamond/3rd image.jpg"
+
 
 const Card = ({ image, title, description }) => {
   return (
@@ -16,6 +20,8 @@ const Card = ({ image, title, description }) => {
           src={image}
           alt={title}
           fill
+          loading="lazy"
+          placeholder="blur"
           className="object-cover w-full h-full"
         />
       </div>
@@ -35,22 +41,19 @@ const Card = ({ image, title, description }) => {
 const TransformYourJourny = ({ id }) => {
   const cardDetails = [
     {
-      image:
-        "/images/Transform Your Journey to Become a Diamond!/1st Image.jpg",
+      image:image1,
       title: "The Entrance",
       description:
         "Let's discuss about your goals and recommend the perfect course to get you started",
     },
     {
-      image:
-        "/images/Transform Your Journey to Become a Diamond!/2nd image.jpg",
+      image:image2,
       title: "Arriving at the Right Destination",
       description:
         "With hands-on experience we make you prepared for your interview. An Open-arm welcome to our team for those who are passionate about teaching. Just start smiling for your better future ahead.",
     },
     {
-      image:
-        "/images/Transform Your Journey to Become a Diamond!/3rd image.jpg",
+      image:image3,
       title: "Getting the Ticket",
       description:
         "Master in-demand skills and earn industry-recognized certifications to enhance your career journey.",

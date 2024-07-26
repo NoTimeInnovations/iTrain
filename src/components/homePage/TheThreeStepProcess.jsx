@@ -2,6 +2,10 @@ import React from "react";
 import Section from "../common/Section";
 import Image from "next/image";
 import Title from "../common/Title";
+import image1 from "../../../public/images/The Three Step Process/1st image.jpg"
+import image2 from "../../../public/images/The Three Step Process/2nd image.jpg"
+import image3 from "../../../public/images/The Three Step Process/3rd image.jpg"
+
 
 const Card = ({ image, title }) => {
   return (
@@ -12,6 +16,8 @@ const Card = ({ image, title }) => {
           src={image}
           alt={title}
           fill
+          loading="lazy"
+          placeholder="blur"
           className="w-full h-full object-cover"
         />
       </div>
@@ -25,15 +31,15 @@ const Card = ({ image, title }) => {
 const TheThreeStepProcess = ({ id }) => {
   const cardDetails = [
     {
-      image: "/images/The Three Step Process/1st image.jpg",
+      image: image1,
       title: "Start Browsing",
     },
     {
-      image: "/images/The Three Step Process/2nd image.jpg",
+      image: image2,
       title: "Schedule a Free Consultation",
     },
     {
-      image: "/images/The Three Step Process/3rd image.jpg",
+      image: image3,
       title: "Enroll and Start Learning",
     },
   ];
