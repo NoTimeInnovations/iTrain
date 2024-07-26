@@ -10,7 +10,7 @@ const HeroSection = () => {
     {
       title: "phone",
       icon: "/images/icons/phone.svg",
-      value: "+91-9073681744",
+      value: "+91 9073681744",
     },
 
     {
