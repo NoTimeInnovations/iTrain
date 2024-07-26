@@ -24,22 +24,22 @@ const HeroSection = () => {
     {
       title: "whatsapp",
       icon: "/images/icons/whatsapp.svg",
-      link: "",
+      link: "https://wa.me/919037681744",
     },
     {
       title: "facebook",
       icon: "/images/icons/facebook.svg",
-      link: "",
+      link: "https://www.facebook.com/profile.php?id=61560484353385",
     },
     {
       title: "instagram",
       icon: "/images/icons/instagram.svg",
-      link: "",
+      link: "https://www.instagram.com/itraintechnologiesremotely/",
     },
     {
       title: "linkedin",
       icon: "/images/icons/linkedin.svg",
-      link: "",
+      link: "https://www.linkedin.com/company/itrain-technologies4malayalees/",
     },
   ];
 
@@ -84,7 +84,7 @@ const HeroSection = () => {
                     <Link
                       href={
                         c.title === "phone"
-                          ? `tele:${c.value}`
+                          ? `tel:${c.value}`
                           : `mailto:${c.value}`
                       }
                     >
@@ -119,7 +119,7 @@ const HeroSection = () => {
             </div>
 
             {/* meet in person  */}
-            <Link href={''} className="flex items-center justify-center gap-2 font-medium lg:justify-start lg:text-lg xl:text-xl">
+            <Link href={'https://maps.app.goo.gl/r4KHXvWw7U2Gj9d98'} className="flex items-center justify-center gap-2 font-medium lg:justify-start lg:text-lg xl:text-xl">
                 {/* icon  */}
                 <Image
                   src="/images/icons/location.svg"

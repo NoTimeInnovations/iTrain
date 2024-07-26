@@ -1,26 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import Button from "./Button";
 import toast from "react-hot-toast";
 
 const Footer = ({ id }) => {
   const webPageLinks = [
     {
       title: "Home",
-      link: "#hero",
+      link: "/#hero",
     },
     {
       title: "About",
-      link: "#about",
+      link: "/about",
     },
     {
       title: "Courses",
-      link: "#right-train",
+      link: "/courses",
     },
     {
       title: "Contact",
-      link: "#footer",
+      link: "/contact-us",
     },
   ];
 
