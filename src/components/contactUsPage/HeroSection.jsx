@@ -4,6 +4,7 @@ import Header from "../common/Header";
 import Title from "../common/Title";
 import Image from "next/image";
 import Link from "next/link";
+import image1 from "../../../public/images/ContactUs/hero-section.jpeg"
 
 const HeroSection = () => {
   const contacts = [
@@ -56,9 +57,11 @@ const HeroSection = () => {
           {/* image  */}
           <div className="relative w-full min-w-[80vw] md:min-w-[60vw] lg:min-w-[50vw] xl:min-w-[40vw] aspect-video overflow-hidden rounded">
             <Image
-              src={"/images/ContactUs/hero-section.jpeg"}
+              src={image1}
               alt="contact-us"
               fill
+              placeholder="blur"
+              loading="lazy"
               className="object-cover w-full h-full"
             />
           </div>
