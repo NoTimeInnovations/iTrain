@@ -10,8 +10,7 @@
 }
 
 .home-bg-pos{
-  background-position: 48% 40%;
-  background-size: auto 160%;
+  scale: 180%;
 }
 
 
@@ -29,7 +28,13 @@
   
   .green-bg-pos{
     background-position: 50% 50%;
-  }   
+  }
+}
+
+@media screen and (min-width : 1440px) {
+  .home-bg-pos{
+    scale:130%;
+  }
 }
 
 
