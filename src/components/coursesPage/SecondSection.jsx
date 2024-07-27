@@ -59,6 +59,7 @@ const SecondSection = () => {
           renderBullet: (index, className) => {
             return `<span class="${className} custom-bullet"></span>`;
           },
+          clickable : true
         }}
         modules={[Pagination]}
         className="mySwiper"
@@ -71,7 +72,7 @@ const SecondSection = () => {
       </Swiper>
 
       {/* pagination container  */}
-      <div className="swiper-pagination flex items-center justify-center absolute bottom-20 md:bottom-10 xl:bottom-32 left-1/2 -translate-x-1/2 gap-2"></div>
+      <div className="swiper-pagination z-[20] flex items-center justify-center absolute bottom-20 md:bottom-10 xl:bottom-32 left-1/2 -translate-x-1/2 gap-2"></div>
     </Section>
   );
 };
