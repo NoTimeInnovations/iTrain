@@ -28,7 +28,7 @@ const HeroSection = () => {
               designer eager to bring your creations to life, Flutter offers
               endless possibilities`,
       ],
-      btnLink: "#",
+      btnLink: "https://wa.me/919037681744",
     },
     {
       image: image2,
@@ -48,7 +48,7 @@ const HeroSection = () => {
         n how to give life to designs and delight users wi
         th every click and scroll.`,
       ],
-      btnLink: "#",
+      btnLink: "https://wa.me/919037681744",
     },
   ];
 
