@@ -66,9 +66,9 @@ const HeroSection = () => {
           </Title>
           {/* sub title  */}
           <SubTitle>
-            Works Well, with the Brain’s Left Hemisphere. Art the Mastery of Web
-            Development & Innovative Mobile Apps by Boarding the iTrain. Your
-            next destination is your next designation.
+            Works Well, with the Brain’s Left Hemisphere. Art the Mastery of Web&nbsp;Development 
+            and <br className="hidden lg:block" /> Innovative&nbsp;Mobile&nbsp;Apps by Boarding the <span className="text-textHoverColor" >iTrain</span>. 
+            You&nbsp;next destination is your next designation.
           </SubTitle>
         </div>
 

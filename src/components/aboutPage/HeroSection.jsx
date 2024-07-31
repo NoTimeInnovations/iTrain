@@ -35,7 +35,7 @@ const HeroSection = () => {
       {/* contents  */}
       <div className=" h-full text-textColor grid place-content-center px-5 md:px-20 py-[100px] xl:px-[200px] gap-5 md:gap-20">
         {/* title  */}
-        <Title>Rise to the Top From Undesirable to Undeniable</Title>
+        <Title>Rise to the Top. From Undesirable to Undeniable</Title>
 
         {/* image and descirption  */}
         <div className="grid gap-10 lg:grid-flow-col place-items-center ">

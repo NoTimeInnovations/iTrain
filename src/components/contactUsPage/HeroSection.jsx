@@ -51,7 +51,7 @@ const HeroSection = () => {
       {/* main contents  */}
       <div className="text-textColor p-5 md:px-20 lg:px-40 xl:px-[200px] grid place-content-center gap-5 md:gap-10 xl:gap-20">
         {/* title  */}
-        <Title>Book an Demo</Title>
+        <Title>Book a Demo</Title>
 
         <div className="grid gap-10 h-full lg:grid-flow-col">
           {/* image  */}
