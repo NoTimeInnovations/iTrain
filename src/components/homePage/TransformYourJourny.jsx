@@ -6,10 +6,9 @@ import "swiper/css";
 import { Navigation } from "swiper/modules";
 import Button from "../common/Button";
 import Title from "../common/Title";
-import image1 from "../../../public/images/Transform Your Journey to Become a Diamond/1st Image.jpg"
-import image2 from "../../../public/images/Transform Your Journey to Become a Diamond/2nd image.jpg"
-import image3 from "../../../public/images/Transform Your Journey to Become a Diamond/3rd image.jpg"
-
+import image1 from "../../../public/images/Transform Your Journey to Become a Diamond/1st Image.jpg";
+import image2 from "../../../public/images/Transform Your Journey to Become a Diamond/2nd image.jpg";
+import image3 from "../../../public/images/Transform Your Journey to Become a Diamond/3rd image.jpg";
 
 const Card = ({ image, title, description }) => {
   return (
@@ -27,12 +26,15 @@ const Card = ({ image, title, description }) => {
       </div>
 
       {/* contents  */}
-      <div className="bg-secondary p-3 grid gap-4">
-        {/* title  */}
-        <p className="font-medium text-xl lg:text-2xl">{title}</p>
+      <div className="bg-secondary p-3 h-[216px] lg:h-[230px]">
+        {/* title and desc  */}
+        <div className="grid gap-4">
+          {/* title  */}
+          <p className="font-medium text-xl lg:text-2xl">{title}</p>
 
-        {/* description  */}
-        <p className="text-sm lg:text-lg">{description}</p>
+          {/* description  */}
+          <p className="text-sm lg:text-lg">{description}</p>
+        </div>
       </div>
     </div>
   );
@@ -41,19 +43,19 @@ const Card = ({ image, title, description }) => {
 const TransformYourJourny = ({ id }) => {
   const cardDetails = [
     {
-      image:image1,
+      image: image1,
       title: "The Entrance",
       description:
         "Let's discuss about your goals and recommend the perfect course to get you started",
     },
     {
-      image:image2,
+      image: image2,
       title: "Arriving at the Right Destination",
       description:
         "With hands-on experience we make you prepared for your interview. An Open-arm welcome to our team for those who are passionate about teaching. Just start smiling for your better future ahead.",
     },
     {
-      image:image3,
+      image: image3,
       title: "Getting the Ticket",
       description:
         "Master in-demand skills and earn industry-recognized certifications to enhance your career journey.",

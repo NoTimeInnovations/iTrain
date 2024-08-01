@@ -5,10 +5,9 @@ import Button from "../common/Button";
 import Link from "next/link";
 import SubTitle from "../common/SubTitle";
 import Title from "../common/Title";
-import image1 from "../../../public/images/Getting to the right train the iTrain/1st image.png"
-import image2 from "../../../public/images/Getting to the right train the iTrain/2nd image.jpg"
-import image3 from "../../../public/images/Getting to the right train the iTrain/3rd image.jpg"
-
+import image1 from "../../../public/images/Getting to the right train the iTrain/1st image.png";
+import image2 from "../../../public/images/Getting to the right train the iTrain/2nd image.jpg";
+import image3 from "../../../public/images/Getting to the right train the iTrain/3rd image.jpg";
 
 const EnteringIntoTheRightTrain = ({ id }) => {
   const cardDetails = [
@@ -66,7 +65,7 @@ const EnteringIntoTheRightTrain = ({ id }) => {
     <Section
       id={id}
       className={
-        "bg-primary text-textColor px-5 md:px-20 py-[100px] xl:pt-[120px] xl:px-[200px] grid place-items-center"
+        "bg-primary text-textColor px-5 md:px-20 py-[100px] xl:pt-[120px] xl:px-[170px] grid place-items-center"
       }
     >
       {/* title and subtitle  */}
@@ -101,32 +100,35 @@ const EnteringIntoTheRightTrain = ({ id }) => {
             </div>
 
             {/* card details  */}
-            <div className="bg-secondary text-textColor p-3 grid gap-3 relative z-10">
-              {/* card title  */}
-              <p className="text-lg md:text-xl font-medium">{card.title}</p>
+            <div className="bg-secondary text-textColor p-3 relative z-10 h-[452px] mL:h-[400px] md:h-[350px] lg:h-[450px] xl:h-[405px]">
+              {/* contents  */}
+              <div className="grid gap-3 relative">
+                {/* card title  */}
+                <p className="text-lg md:text-xl font-medium">{card.title}</p>
 
-              {/* card description  */}
-              <p className="">{card.description}</p>
+                {/* card description  */}
+                <p className="">{card.description}</p>
 
-              {/* fee detail  */}
-              <p className="text-sm mt-10">
-                <span>{card.feeDetail.textPart1}</span>{" "}
-                <span className="text-[150%] line-through">
-                  {card.feeDetail.strike}
-                </span>{" "}
-                <span className="text-[150%] text-textHoverColor">
-                  {card.feeDetail.bold}{" "}
-                </span>
-                <span>{card.feeDetail.textPart2}</span>
-              </p>
+                {/* fee detail  */}
+                <p className="text-sm mt-10">
+                  <span>{card.feeDetail.textPart1}</span>{" "}
+                  <span className="text-[150%] line-through">
+                    {card.feeDetail.strike}
+                  </span>{" "}
+                  <span className="text-[150%] text-textHoverColor">
+                    {card.feeDetail.bold}{" "}
+                  </span>
+                  <span>{card.feeDetail.textPart2}</span>
+                </p>
 
-              {/* button  */}
-              <div className="flex justify-center py-5">
-                <Link href={card.button.link}>
-                  <Button color={"text-textHoverColor "} bgInvert={true}>
-                    {card.button.text}
-                  </Button>
-                </Link>
+                {/* button  */}
+                <div className="flex justify-center py-5">
+                  <Link href={card.button.link}>
+                    <Button color={"text-textHoverColor "} bgInvert={true}>
+                      {card.button.text}
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

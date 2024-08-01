@@ -3,10 +3,9 @@ import Section from "../common/Section";
 import Image from "next/image";
 import Title from "../common/Title";
 import SubTitle from "../common/SubTitle";
-import image1 from "../../../public/images/Taking the Wrong Train to the Right Destination/1st image.jpg"
-import image2 from "../../../public/images/Taking the Wrong Train to the Right Destination/2nd image.jpg"
-import image3 from "../../../public/images/Taking the Wrong Train to the Right Destination/3rd image.jpg"
-
+import image1 from "../../../public/images/Taking the Wrong Train to the Right Destination/1st image.jpg";
+import image2 from "../../../public/images/Taking the Wrong Train to the Right Destination/2nd image.jpg";
+import image3 from "../../../public/images/Taking the Wrong Train to the Right Destination/3rd image.jpg";
 
 const TakingTheWrongTrain = ({ id }) => {
   const cardDetails = [
@@ -34,7 +33,7 @@ const TakingTheWrongTrain = ({ id }) => {
     <Section
       id={id}
       className={
-        "bg-primary px-5 md:px-20 py-[100px] xl:pt-[120px] xl:px-[200px] grid place-items-center "
+        "bg-primary px-5 md:px-20 lg:px-12 py-[100px] xl:pt-[120px] xl:px-[200px] grid place-items-center "
       }
     >
       {/* title and subtitle  */}
@@ -72,12 +71,15 @@ const TakingTheWrongTrain = ({ id }) => {
             </div>
 
             {/* card details  */}
-            <div className="bg-secondary text-textColor p-3 grid gap-3 relative z-10">
-              {/* card title  */}
-              <p className="text-lg md:text-xl font-medium">{card.title}</p>
+            <div className="bg-secondary text-textColor p-3 z-10 h-[332px] mL:h-[250px] lg:h-[330px]  xl:h-[280px]">
+              {/* title and desc  */}
+              <div className="grid gap-3 relative">
+                {/* card title  */}
+                <p className="text-lg md:text-xl font-medium">{card.title}</p>
 
-              {/* card description  */}
-              <p className="">{card.description}</p>
+                {/* card description  */}
+                <p className="">{card.description}</p>
+              </div>
             </div>
           </div>
         ))}

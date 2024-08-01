@@ -13,6 +13,9 @@ module.exports = {
         buttonHover: "#4a4459",
         textColor : "#e6e0e9",
         textHoverColor: "#cfbcff"
+      },
+      screens : {
+        mL : '375px'
       }
     },
   },
