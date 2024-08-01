@@ -75,7 +75,7 @@ const TransformYourJourny = ({ id }) => {
       </Title>
 
       {/* swiper  */}
-      <div className="w-screen mt-32 px-5 md:px-20 xl:px-[22rem]">
+      <div className="w-screen mt-32 px-5 md:px-20 xl:px-[16rem] 2xl:px-[22rem]">
         <div className="relative">
           <Swiper
             slidesPerView={1}
