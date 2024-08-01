@@ -65,7 +65,7 @@ const EnteringIntoTheRightTrain = ({ id }) => {
     <Section
       id={id}
       className={
-        "bg-primary text-textColor px-5 md:px-20 py-[100px] xl:pt-[120px] xl:px-[170px] grid place-items-center"
+        "bg-primary text-textColor px-5 md:px-20 py-[100px] xl:pt-[120px] xl:px-[130px] 2xl:px-[170px] grid place-items-center"
       }
     >
       {/* title and subtitle  */}
