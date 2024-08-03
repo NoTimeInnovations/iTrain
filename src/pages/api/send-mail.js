@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 
     // Setup email data
     let mailOptions = {
-        from: '"abhinshelly@gmail.com', // Replace with your sender address
+        from: process.env.NODEMAILER_SEND_FROM, // Replace with your sender address
         to: toMail, // List of receivers
         subject: 'Subscribed to News Letter', // Subject line
         text: 'You have been subscribed to News Letter of iTrain', // Plain text body
