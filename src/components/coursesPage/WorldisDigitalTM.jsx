@@ -57,6 +57,7 @@ const WorldisDigitalTM = () => {
             fill
             placeholder="blur"
             loading="lazy"
+            quality={10}
             className="object-cover w-full h-full rounded-md"
           />
         </div>

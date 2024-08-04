@@ -26,14 +26,14 @@ const Card = ({ image, title, description }) => {
       </div>
 
       {/* contents  */}
-      <div className="bg-secondary p-3 h-[216px] lg:h-[230px]">
+      <div className="bg-secondary p-3 h-[216px] lg:p-5 ">
         {/* title and desc  */}
         <div className="grid gap-4">
           {/* title  */}
           <p className="font-medium text-xl lg:text-2xl">{title}</p>
 
           {/* description  */}
-          <p className="text-sm lg:text-lg">{description}</p>
+          <p className="text-sm lg:text-[16px] lg:leading-[20px]">{description}</p>
         </div>
       </div>
     </div>

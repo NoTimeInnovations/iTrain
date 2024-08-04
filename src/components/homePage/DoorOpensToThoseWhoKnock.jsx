@@ -68,6 +68,7 @@ const DoorOpensToThoseWhoKnock = ({ id }) => {
                   alt={card.title}
                   fill
                   loading="lazy"
+                  quality={10}
                   placeholder="blur"
                   className="w-full h-full object-cover"
                 />

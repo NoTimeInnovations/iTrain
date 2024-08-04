@@ -198,14 +198,14 @@ const Footer = ({ id }) => {
             </div>
 
             {/* subscribe to newsletter  */}
-            <div className="grid place-items-center text-center gap-3 lg:gap-5 h-fit lg:grid-flow-col lg:w-fit">
-              <label className="text-lg font-medium lg:text-xl" htmlFor="email">
+            <div className="grid place-items-center text-center gap-3 lg:gap-5 h-fit lg:grid-flow-col lg:items-center lg:place-items-start lg:grid-cols-[min-content,1fr]">
+              <label className="text-lg font-medium lg:text-xl text-nowrap" htmlFor="email">
                 Subscribe to our NewsLetter
               </label>
 
               <form
                 onSubmit={handleFormSubmit}
-                className="grid grid-cols-[1fr,min-content] bg-[#938F96] rounded place-items-center px-3 md:py-2"
+                className="grid grid-cols-[1fr,min-content] bg-[#938F96] rounded place-items-center px-3 md:py-2 lg:w-full xl:w-[90%]"
               >
                 <input
                   type="email"

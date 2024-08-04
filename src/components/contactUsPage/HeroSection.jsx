@@ -62,6 +62,7 @@ const HeroSection = () => {
               fill
               placeholder="blur"
               loading="lazy"
+              quality={10}
               className="object-cover w-full h-full"
             />
           </div>
@@ -81,7 +82,7 @@ const HeroSection = () => {
                     className="flex items-center gap-2 justify-center text-center lg:justify-start lg:text-start lg:text-lg"
                   >
                     {/* Image  */}
-                    <Image src={c.icon} alt={c.title} width={20} height={20} />
+                    <Image src={c.icon} alt={c.title} width={20} height={20} loading="lazy" quality={10} />
 
                     {/* value  */}
                     <Link

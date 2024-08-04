@@ -47,6 +47,7 @@ const HeroSection = () => {
               fill
               placeholder="blur"
               loading="lazy"
+              quality={10}
               className="object-contain w-full h-full"
             />
           </div>

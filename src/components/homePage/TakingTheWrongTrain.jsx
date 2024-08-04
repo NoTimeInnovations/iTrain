@@ -66,6 +66,7 @@ const TakingTheWrongTrain = ({ id }) => {
                 fill
                 placeholder="blur"
                 loading="lazy"
+                quality={10}
                 className="w-full h-full object-cover"
               />
             </div>
