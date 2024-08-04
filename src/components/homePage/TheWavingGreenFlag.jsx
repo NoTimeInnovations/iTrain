@@ -9,12 +9,12 @@ const TheWavingGreenFlag = ({ id }) => {
     <Section
       id={id}
       style={{ backgroundImage: `url('/images/Green Flag/bg-image.png')` }}
-      className={`bg-cover green-bg-pos relative `}
+      className={`bg-cover green-bg-pos relative min-h-full`}
     >
       {/* contents  */}
-      <div className="min-h-screen backdrop-brightness-[20%] px-5 md:px-20 py-[100px] xl:pt-[120px] xl:px-[200px] grid place-items-center">
+      <div className="min-h-screen backdrop-brightness-[20%] px-5 md:px-20 py-[50px] md:py-[100px] xl:pt-[120px] xl:px-[200px] grid grid-rows-[min-content,1fr]">
         {/* title and subtitle  */}
-        <div className="text-textColor text-center grid gap-5 ">
+        <div className="text-textColor text-center grid gap-5 h-fit">
           {/* title  */}
           <Title>
             Taking the Wrong Train to the <br className="md:hidden" /> Right
@@ -29,13 +29,12 @@ const TheWavingGreenFlag = ({ id }) => {
         </div>
 
         {/* chart container  */}
-        <div className="relative w-full aspect-square mt-20 max-w-[600px] xl:max-w-[800px]">
+        <div className="relative w-full aspect-square mt-20 max-w-[600px] xl:max-w-[800px] place-self-center ">
           <Image
             src={"/images/Green Flag/center-image.svg"}
             alt="green flag"
             fill
             loading="lazy"
-            quality={10}
             className="object-cover w-full h-full"
           />
         </div>

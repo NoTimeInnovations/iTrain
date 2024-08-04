@@ -57,7 +57,7 @@ const HeroSection = () => {
       <Header />
 
       {/* contents  */}
-      <div className="h-full text-textColor px-5 md:px-20 py-[100px] xl:px-[200px] gap-5 grid lg:gap-20">
+      <div className="h-full text-textColor px-5 md:px-20 py-[50px] md:py-[100px] xl:px-[200px] gap-5 grid lg:gap-20">
         {/* title and subtitle  */}
         <div className="grid gap-5 text-center lg:gap-10">
           {/* title  */}

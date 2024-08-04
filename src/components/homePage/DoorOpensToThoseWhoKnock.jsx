@@ -46,7 +46,7 @@ const DoorOpensToThoseWhoKnock = ({ id }) => {
     <Section
       id={id}
       className={
-        "bg-[#101417] px-5 md:px-20 py-[100px] xl:pt-[120px] xl:px-[200px] text-textColor"
+        "bg-[#101417] px-5 md:px-20 py-[50px] md:py-[100px] xl:pt-[120px] xl:px-[200px] text-textColor"
       }
     >
       {/* title  */}

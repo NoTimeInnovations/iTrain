@@ -15,7 +15,8 @@ module.exports = {
         textHoverColor: "#cfbcff"
       },
       screens : {
-        mL : '375px'
+        mL : '375px',
+        xxl : '1440px'
       }
     },
   },

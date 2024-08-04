@@ -42,6 +42,7 @@ const Header = () => {
     },
   ];
 
+
   return (
     <header className="bg-primary px-5 md:px-20 lg:px-40 xl:px-[194px] flex items-center justify-between text-textColor">
       {/* logo  */}
@@ -61,7 +62,7 @@ const Header = () => {
         isOpen={isOpen}
         toggleOpen={setIsOpen}
         color={"white"}
-        className={"z-[51] lg:hidden"}
+        className={"z-[100] lg:hidden"}
       />
 
       {/* nav backdrop  */}

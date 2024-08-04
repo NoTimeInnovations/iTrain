@@ -26,7 +26,7 @@ const Card = ({ image, title, description }) => {
       </div>
 
       {/* contents  */}
-      <div className="bg-secondary p-3 h-[216px] lg:p-5 ">
+      <div className="bg-secondary p-4 h-[235px] lg:p-5 ">
         {/* title and desc  */}
         <div className="grid gap-4">
           {/* title  */}
@@ -67,7 +67,7 @@ const TransformYourJourny = ({ id }) => {
   return (
     <Section
       id={id}
-      className={"bg-primary text-textColor py-[100px] xl:pt-[120px] relative"}
+      className={"bg-primary text-textColor py-[50px] md:py-[100px] xl:pt-[120px] relative min-h-full"}
     >
       {/* title  */}
       <Title>

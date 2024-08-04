@@ -33,7 +33,7 @@ const HeroSection = () => {
       <Header />
 
       {/* contents  */}
-      <div className=" h-full text-textColor grid place-content-center px-5 md:px-20 py-[100px] xl:px-[200px] gap-5 md:gap-20">
+      <div className=" h-full text-textColor grid place-content-center px-5 md:px-20 py-[50px] md:py-[100px] xl:px-[200px] gap-5 md:gap-20">
         {/* title  */}
         <Title>Rise to the Top. From Undesirable to Undeniable</Title>
 

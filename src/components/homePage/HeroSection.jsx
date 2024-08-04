@@ -20,7 +20,6 @@ const HeroSection = ({ id }) => {
           fill
           placeholder="blur"
           loading="lazy"
-          quality={10}
           className="object-cover home-bg-pos"
         />
 
@@ -29,7 +28,7 @@ const HeroSection = ({ id }) => {
           {/* center text  */}
           <p className="text-[27px] md:text-[40px] xl:text-[57px] xl:leading-[64px] tracking-[-0.25%] text-textColor xl:mt-32">
             For those in the Wrong <br className="hidden md:block" /> Career
-            Track, <span className="text-textHoverColor">We are Here... </span>
+            Track, <span className="text-textHoverColor">We&nbsp;are here Together... </span>
             <br />
             Until You reach the <br />{" "}
             <span className="text-textHoverColor">Right Destination…!</span> 

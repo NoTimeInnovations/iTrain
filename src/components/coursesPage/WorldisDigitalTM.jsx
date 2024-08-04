@@ -28,7 +28,7 @@ const WorldisDigitalTM = () => {
 
   return (
     <Section
-      className={`bg-secondary text-textColor px-5 md:px-20 py-[100px] xl:px-[200px] grid gap-5 lg:gap-20 grid-rows-[min-content,1fr] `}
+      className={`bg-secondary text-textColor px-5 md:px-20 py-[50px] md:py-[100px] xl:px-[200px] grid gap-5 lg:gap-20 grid-rows-[min-content,1fr] `}
     >
       {/* title and subtitle  */}
       <div

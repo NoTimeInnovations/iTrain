@@ -22,7 +22,7 @@ const VisionAndMission = () => {
       className={`bg-cover bg-center min-h-auto`}
     >
       {/* contents  */}
-      <div className="min-h-screen bg-secondary bg-opacity-50 text-textColor px-5 md:px-20 py-[100px] xl:px-[200px] grid grid-rows-[min-content,1fr]">
+      <div className="min-h-screen bg-secondary bg-opacity-50 text-textColor px-5 md:px-20 py-[50px] md:py-[100px] xl:px-[200px] grid grid-rows-[min-content,1fr]">
         {/* title  */}
         <Title> Vision and Mission</Title>
 

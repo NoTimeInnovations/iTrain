@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const SwiperCard = ({ content }) => {
   return (
-    <div className="w-full min-h-screen text-textColor px-5 md:px-20 py-[100px] xl:px-[200px]">
+    <div className="w-full min-h-screen text-textColor px-5 md:px-20 pb-[100px] pt-[50px] md:py-[100px] xl:px-[200px]">
       {/* titile and subtitle  */}
       <div className="place-items-center text-center grid gap-5 ">
         {/* title  */}

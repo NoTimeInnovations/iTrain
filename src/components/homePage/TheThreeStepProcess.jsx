@@ -49,7 +49,7 @@ const TheThreeStepProcess = ({ id }) => {
     <Section
       id={id}
       className={
-        "bg-secondary text-textColor px-5 py-[100px] xl:pt-[120px] grid grid-rows-[min-content,1fr] place-items-center"
+        "bg-secondary text-textColor px-5 py-[50px] md:py-[100px] xl:pt-[120px] grid grid-rows-[min-content,1fr] place-items-center"
       }
     >
       {/* title  */}

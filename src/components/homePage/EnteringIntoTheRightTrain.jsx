@@ -65,7 +65,7 @@ const EnteringIntoTheRightTrain = ({ id }) => {
     <Section
       id={id}
       className={
-        "bg-primary text-textColor px-5 md:px-20 py-[100px] xl:pt-[120px] xl:px-[130px] 2xl:px-[170px] grid place-items-center"
+        "bg-primary text-textColor px-5 md:px-20 py-[50px] md:py-[100px] xl:pt-[120px] xl:px-[130px] 2xl:px-[170px] grid place-items-center"
       }
     >
       {/* title and subtitle  */}
@@ -101,7 +101,7 @@ const EnteringIntoTheRightTrain = ({ id }) => {
             </div>
 
             {/* card details  */}
-            <div className="bg-secondary text-textColor p-3 relative z-10 h-[452px] mL:h-[400px] md:h-[350px] lg:h-[450px] xl:h-[405px]">
+            <div className="bg-secondary text-textColor p-3 relative z-10 h-[430px] mL:h-[400px] md:h-[350px] lg:h-[450px] xl:h-[405px]">
               {/* contents  */}
               <div className="grid gap-3 relative">
                 {/* card title  */}

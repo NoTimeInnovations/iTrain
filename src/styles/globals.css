@@ -11,6 +11,7 @@
 
 .home-bg-pos{
   scale: 180%;
+  transform: translate(30px,-10px);
 }
 
 
@@ -33,7 +34,7 @@
 
 @media screen and (min-width : 1440px) {
   .home-bg-pos{
-    scale:130%;
+    scale:133%;
   }
 }
 

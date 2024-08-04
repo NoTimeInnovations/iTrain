@@ -107,7 +107,7 @@ const Footer = ({ id }) => {
       >
         <div className="grid gap-10 lg:grid-flow-col">
           {/* webPageLinks  */}
-          <div className="grid place-items-center gap-3 lg:gap-5 text-center lg:text-start lg:place-items-start h-fit">
+          <div className="grid  gap-3 lg:gap-5 h-fit">
             {/* title  */}
             <p className="text-lg font-medium lg:text-xl">Quick Links</p>
 
@@ -126,11 +126,11 @@ const Footer = ({ id }) => {
             {/* get in touch follow us and visit us  */}
             <div className="grid lg:grid-flow-col gap-10">
               {/* getInTouchLInks  */}
-              <div className="grid place-items-center gap-3 lg:gap-5 text-center h-fit lg:text-start lg:place-items-start ">
+              <div className="grid gap-3 lg:gap-5 h-fit">
                 {/* title  */}
                 <p className="text-lg font-medium lg:text-xl">Get in touch</p>
                 {/* links  */}
-                <div className="grid place-items-center text-center gap-2 lg:text-start lg:place-items-start">
+                <div className="grid gap-2">
                   {getInTouchLinks.map((item, index) => (
                     <div
                       key={`getintouchlinks_${index}`}
@@ -152,7 +152,7 @@ const Footer = ({ id }) => {
               </div>
 
               {/* visit us link  */}
-              <div className="grid place-items-center text-center gap-3 lg:gap-5 h-fit lg:text-start lg:place-items-start ">
+              <div className="grid gap-3 lg:gap-5 h-fit">
                 {/* title  */}
                 <p className="font-medium text-lg lg:text-xl">Visit us</p>
 
@@ -176,7 +176,7 @@ const Footer = ({ id }) => {
               </div>
 
               {/* follow us links  */}
-              <div className="grid place-items-center text-center gap-3 lg:gap-5 h-fit lg:text-start lg:place-items-start">
+              <div className="grid gap-3 lg:gap-5 h-fit">
                 {/* title  */}
                 <p className="text-lg font-medium lg:text-xl">Follow us</p>
 
@@ -198,7 +198,7 @@ const Footer = ({ id }) => {
             </div>
 
             {/* subscribe to newsletter  */}
-            <div className="grid place-items-center text-center gap-3 lg:gap-5 h-fit lg:grid-flow-col lg:items-center lg:place-items-start lg:grid-cols-[min-content,1fr]">
+            <div className="grid gap-3 lg:gap-5 h-fit lg:grid-flow-col lg:items-center lg:place-items-start lg:grid-cols-[min-content,1fr]">
               <label className="text-lg font-medium lg:text-xl text-nowrap" htmlFor="email">
                 Subscribe to our NewsLetter
               </label>
@@ -245,8 +245,7 @@ const Footer = ({ id }) => {
           <sup className="text-white font-semibold">TM</sup>{" "}
           <br className="md:hidden" />
           <span>
-            2024 | By MAS DESIGN AND CODE {`(OPC)`} PVT LTD | All Rights
-            Reserved
+            2024 | By MAS DESIGN AND CODE {`(OPC)`} PVT LTD | All&nbsp;Rights&nbsp;Reserved
           </span>
         </p>
       </div>

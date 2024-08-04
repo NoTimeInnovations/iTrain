@@ -66,20 +66,19 @@ const TakingTheWrongTrain = ({ id }) => {
                 fill
                 placeholder="blur"
                 loading="lazy"
-                quality={10}
                 className="w-full h-full object-cover"
               />
             </div>
 
             {/* card details  */}
-            <div className="bg-secondary text-textColor p-3 z-10 h-[332px] mL:h-[250px] lg:h-[330px]  xl:h-[280px]">
+            <div className="bg-secondary text-textColor p-3 z-10 h-[320px] mL:h-[250px] lg:h-[330px]  xl:h-[340px] xxl:h-[270px]">
               {/* title and desc  */}
               <div className="grid gap-3 relative">
                 {/* card title  */}
                 <p className="text-lg md:text-xl font-medium">{card.title}</p>
 
                 {/* card description  */}
-                <p className="">{card.description}</p>
+                <p className="text-[15px] lg:text-[16px]">{card.description}</p>
               </div>
             </div>
           </div>

@@ -41,7 +41,7 @@ const HamburgerIcon = ({ isOpen, toggleOpen, className, color }) => {
 
   return (
     <motion.div
-      onClick={toggleOpen}
+      onClick={()=>toggleOpen((prev)=>(!prev))}
       className={`grid gap-1.5 group cursor-pointer z-50 ${className}`}
     >
       <motion.div
