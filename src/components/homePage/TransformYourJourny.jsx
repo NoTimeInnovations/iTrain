@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Section from "../common/Section";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -33,7 +33,9 @@ const Card = ({ image, title, description }) => {
           <p className="font-medium text-xl lg:text-2xl">{title}</p>
 
           {/* description  */}
-          <p className="text-sm lg:text-[16px] lg:leading-[20px]">{description}</p>
+          <p className="text-sm lg:text-[16px] lg:leading-[20px]">
+            {description}
+          </p>
         </div>
       </div>
     </div>
@@ -64,10 +66,14 @@ const TransformYourJourny = ({ id }) => {
 
   const swiperRef = useRef();
 
+  const [isPrevBtnHover, setPrevBtnHover] = useState(false);
+
   return (
-    <Section
+    <section
       id={id}
-      className={"bg-primary text-textColor py-[50px] md:py-[100px] xl:pt-[120px] relative min-h-full"}
+      className={
+        "bg-primary text-textColor py-[50px] md:py-[100px] xl:py-[120px] relative min-h-full"
+      }
     >
       {/* title  */}
       <Title>
@@ -75,7 +81,7 @@ const TransformYourJourny = ({ id }) => {
       </Title>
 
       {/* swiper  */}
-      <div className="w-screen mt-32 px-5 md:px-20 xl:px-[12rem] 2xl:px-[22rem]">
+      <div className="w-screen mt-16 md:mt-24 lg:mt-28 px-5 md:px-20 xl:px-[12rem] 2xl:px-[22rem]">
         <div className="relative">
           <Swiper
             slidesPerView={1}
@@ -112,9 +118,13 @@ const TransformYourJourny = ({ id }) => {
             className="swipe-btn-prev"
             onClick={() => swiperRef.current.slidePrev()}
           >
-            <Button bg={"bg-secondary"} bgInvert={true}>
+            <button
+              className="px-[24px] py-[10px] rounded-full w-fit active:scale-95  transition-all hover:bg-buttonHover hover:border-transparent border-[1px] border-[#939091] text-textColor"
+              onMouseEnter={() => setPrevBtnHover(true)}
+              onMouseLeave={() => setPrevBtnHover(false)}
+            >
               Previous
-            </Button>
+            </button>
           </div>
 
           {/* next button  */}
@@ -122,11 +132,13 @@ const TransformYourJourny = ({ id }) => {
             className="swipe-btn-next"
             onClick={() => swiperRef.current.slideNext()}
           >
-            <Button bg={"bg-buttonHover"}>Next</Button>
+            <button className={`px-[24px] py-[10px] rounded-full w-fit active:scale-95  transition-all border-[1px] ${!isPrevBtnHover ? 'bg-buttonHover border-transparent' : ' border-[#939091]'} text-textColor`}>
+              Next
+            </button>
           </div>
         </div>
       </div>
-    </Section>
+    </section>
   );
 };
 

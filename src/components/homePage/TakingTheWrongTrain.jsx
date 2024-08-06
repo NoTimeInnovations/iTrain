@@ -40,8 +40,7 @@ const TakingTheWrongTrain = ({ id }) => {
       <div className="text-textColor text-center grid gap-5 ">
         {/* title  */}
         <Title>
-          Taking the Wrong Train to the <br className="md:hidden" /> Right
-          Destination?
+          Taking the Wrong Train to the <br className="md:hidden" /> Right&nbsp;Destination?
         </Title>
         {/* subtitle  */}
         <SubTitle>

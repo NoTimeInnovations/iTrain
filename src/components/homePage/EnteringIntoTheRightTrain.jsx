@@ -55,7 +55,7 @@ const EnteringIntoTheRightTrain = ({ id }) => {
         textPart2: "of  course fee per student",
       },
       button: {
-        text: "Join Us",
+        text: "Join us",
         link: "https://wa.me/919037681744",
       },
     },
@@ -72,8 +72,7 @@ const EnteringIntoTheRightTrain = ({ id }) => {
       <div className="text-textColor text-center grid gap-5 ">
         {/* title  */}
         <Title>
-          Entering into the right train, the{" "}
-          <span className="text-textHoverColor">iTrain</span>
+          Entering into the right train, the&nbsp;<span className="text-textHoverColor">iTrain</span>
         </Title>
 
         {/* subtitle  */}

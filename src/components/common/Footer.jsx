@@ -205,7 +205,7 @@ const Footer = ({ id }) => {
 
               <form
                 onSubmit={handleFormSubmit}
-                className="grid grid-cols-[1fr,min-content] bg-[#938F96] rounded place-items-center px-3 md:py-2 lg:w-full xl:w-[90%]"
+                className=" grid grid-cols-[1fr,min-content] bg-[#938F96] rounded place-items-center px-3 md:py-2 lg:w-full xl:w-[90%]"
               >
                 <input
                   type="email"

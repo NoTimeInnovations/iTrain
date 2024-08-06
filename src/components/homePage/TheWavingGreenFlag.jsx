@@ -17,14 +17,12 @@ const TheWavingGreenFlag = ({ id }) => {
         <div className="text-textColor text-center grid gap-5 h-fit">
           {/* title  */}
           <Title>
-            Taking the Wrong Train to the <br className="md:hidden" /> Right
-            Destination?
+            The Waving Green Flag of the&nbsp;<span className="text-textHoverColor">iTrain</span>
           </Title>
 
           {/* subtitle  */}
           <SubTitle>
-            Let’s Analyse Where the Wrong <br className="md:hidden" /> Career is
-            Taking You
+            Through the Single Lane to your Ambitious Career Gateway!
           </SubTitle>
         </div>
 
