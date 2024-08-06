@@ -103,7 +103,7 @@ const Footer = ({ id }) => {
     <>
       <footer
         id={id}
-        className="bg-primary text-textColor p-10 lg:p-20 xl:px-80 xl:pt-32 xl:pb-40 relative"
+        className="bg-primary text-textColor p-10 lg:p-20 xl:px-60 2xl:px-80 xl:pt-32 xl:pb-40 relative"
       >
         <div className="grid gap-10 lg:grid-flow-col">
           {/* webPageLinks  */}
