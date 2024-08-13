@@ -61,7 +61,7 @@ const Footer = ({ id }) => {
     {
       image: "/images/icons/behance.svg",
       title: "behance",
-      link: "https://www.behance.net/itraintechnol",
+      link: "https://www.behance.net/itrainremotely",
     },
     {
       image: "/images/icons/linkedin.svg",
@@ -79,6 +79,7 @@ const Footer = ({ id }) => {
       method: "POST",
       headers: {
         "content-type": "application/json",
+        Origin: process.env.NEXT_PUBLIC_BASE_URL,
       },
       body: JSON.stringify({
         email: formEmail,
@@ -199,7 +200,10 @@ const Footer = ({ id }) => {
 
             {/* subscribe to newsletter  */}
             <div className="grid gap-3 lg:gap-5 h-fit lg:grid-flow-col lg:items-center lg:place-items-start lg:grid-cols-[min-content,1fr]">
-              <label className="text-lg font-medium lg:text-xl text-nowrap" htmlFor="email">
+              <label
+                className="text-lg font-medium lg:text-xl text-nowrap"
+                htmlFor="email"
+              >
                 Subscribe to our NewsLetter
               </label>
 
@@ -245,7 +249,8 @@ const Footer = ({ id }) => {
           <sup className="text-white font-semibold">TM</sup>{" "}
           <br className="md:hidden" />
           <span>
-            2024 | By MAS DESIGN AND CODE {`(OPC)`} PVT LTD | All&nbsp;Rights&nbsp;Reserved
+            2024 | By MAS DESIGN AND CODE {`(OPC)`} PVT LTD |
+            All&nbsp;Rights&nbsp;Reserved
           </span>
         </p>
       </div>
