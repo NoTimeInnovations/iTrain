@@ -26,7 +26,7 @@ const Footer = ({ id }) => {
   const getInTouchLinks = [
     {
       title: "+91 9073681744",
-      link: "tel:+919073681744",
+      link: "tel:+919037681744",
       icon: "/images/icons/phone.svg",
     },
     {
